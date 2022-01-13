@@ -7,60 +7,55 @@
 
 
 <body>
+  <h1>Phone web shop</h1>
 
-<h1>Phone web shop</h1>
-<!--Table-->
-<section>
-
-    <table>
-      <tr>
-        <th>Brand</th>
-        <th>Model</th>
-        <th>OS</th>
-        <th>Screensize</th>
-        <th>Image</th>
-      </tr>
-      <!--Row 1-->
-      <tr>
-        <td>Apple</td>
-        <td>I Phone X</td>
-        <td>iOS</td>
-        <td>5</td>
-        <td> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px" height="200px"</td>
-      </tr>
-      <!--Row 2-->
-      <tr>
-        <td>Samsung</td>
-        <td>Galaxy A22</td>
-        <td>Android</td>
-        <td>6.4</td>
-        <td><img src="https://www.netonnet.no/GetFile/ProductImagePrimary/telefon-gps/samsung-galaxy-a22-black-lte(1018923)_445160_1_Normal_Large.jpg" alt="Picture of Samsung A22" ></td>
-      </tr>
-      <!--Row 3-->
-      <tr>
-        <td>Huawei</td>
-        <td>Y6p</td>
-        <td>Emui</td>
-        <td>6.3</td>
-        <td></td>
-      </tr>
-      <!--Row 4, input field-->
-      <tr>
-        <form action="https://wt.ops.labs.vu.nl/api22/????????" method="post">
-          <td><input name="Brand"></td>
-          <td><input name="Model"></td>
-          <td><input name="Screensize"></td>
-          <td><input name="OS"></td>
-          <td><input name="Image"></td>
-          <td><input type="submit" value = "Submit"></td>
-        </form>
-      </tr>
-
-    </table>
-
-
-</section>
-
+  <!--Table-->
+  <section>
+      <table>
+        <tr>
+          <th>Brand</th>
+          <th>Model</th>
+          <th>OS</th>
+          <th>Screensize</th>
+          <th>Image</th>
+        </tr>
+        <!--Row 1-->
+        <tr>
+          <td>Apple</td>
+          <td>I Phone X</td>
+          <td>iOS</td>
+          <td>5</td>
+          <td> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px" height="200px"</td>
+        </tr>
+        <!--Row 2-->
+        <tr>
+          <td>Samsung</td>
+          <td>Galaxy A22</td>
+          <td>Android</td>
+          <td>6.4</td>
+          <td><img src="https://www.netonnet.no/GetFile/ProductImagePrimary/telefon-gps/samsung-galaxy-a22-black-lte(1018923)_445160_1_Normal_Large.jpg" alt="Picture of Samsung A22" ></td>
+        </tr>
+        <!--Row 3-->
+        <tr>
+          <td>Huawei</td>
+          <td>Y6p</td>
+          <td>Emui</td>
+          <td>6.3</td>
+          <td></td>
+        </tr>
+        <!--Row 4, input field with a form that sends the input to the server using a generated key-->
+        <tr>
+          <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
+            <td><label for="Brand"><b>Brand</b></label> <br><input name="Brand" placeholder="Choose a Brand"> </td>
+            <td><label for="Model"><b>Model</b></label> <input name="Model" placeholder="Choose a Model"></td>
+            <td><label for="Screensize"><b>Screensize</b></label> <input name="Screensize" placeholder="Choose a Screensize"></td>
+            <td><label for="OS"><b>OS</b></label> <input name="OS" placeholder="Choose an OS"></td>
+            <td><label for="Image"><b>Image</b></label> <input name=Image placeholder="Choose an Image"></td>
+            <td><input type="submit" value = "Submit"></td>
+          </form>
+        </tr>
+      </table>
+  </section>
 
 </body>
 </html>

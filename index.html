@@ -46,11 +46,12 @@
         <!--Row 4, input field with a form that sends the input to the server using a generated key-->
         <tr>
           <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
-            <td><label for="brand"><b>Brand</b></label> <br><input name="brand" placeholder="Choose a Brand"> </td>
-            <td><label for="model"><b>Model</b></label> <input name="model" placeholder="Choose a Model"></td>
-            <td><label for="screensize"><b>Screensize</b></label> <input name="screensize" placeholder="Choose a Screensize"></td>
-            <td><label for="oS"><b>OS</b></label> <input name="os" type="sting" placeholder="Choose an OS"></td>
-            <td><label for="image"><b>Image</b></label> <input name=image placeholder="Choose an Image"></td>
+            <td><label for="brand"></label> <input name="brand" placeholder="Choose a Brand"> </td>
+            <td><label for="model"></label> <input name="model" placeholder="Choose a Model"></td>
+            <td><label for="oS"></label> <input name="os" type="text" placeholder="Choose an OS"></td>
+            <!--There is a prblem on the line nelow. It looks like the server only accepts integer numbers and not float???-->
+            <td><label for="screensize"></label> <input name="screensize" type="integer" placeholder="Choose a Screensize"></td>
+            <td><label for="image"></label> <input name=image placeholder="Choose an Image"></td>
             <td><input type="submit" value = "Submit"></td>
           </form>
         </tr>

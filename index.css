@@ -66,6 +66,23 @@ caption{
   width: 9rem;
 }
 
+#mail:link {
+  color: #3B99D2;
+}
+
+#mail:active {
+  color: green;
+}
+
+#description:link {
+  color: green;
+}
+
+/*maybe not working*/
+#description:visited {
+  color: blue;
+}
+
 footer {
   text-align: center;
   padding: 1px;

@@ -32,6 +32,9 @@ nav li {
   display: inline-block
 }
 
+@media print{
+/*For later: media print code here. Everything from this function to the top of the document  */
+}
 nav li a {
   display: block;
   color: white;

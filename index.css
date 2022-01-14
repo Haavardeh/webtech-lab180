@@ -27,6 +27,19 @@
   color: brown;
 }
 
+figure {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#new {
+  height: 300px;
+  width: 300px;
+}
+
 
 
 /* navigation bar */
@@ -70,6 +83,11 @@ caption{
   font-size: 2rem;
 }
 
+#info dl {
+  list-style-type: circle;
+}
+
+
 /*We have to find a way to make all the pictures the same size*/
 .picture_phones{
   object-fit: cover;
@@ -91,6 +109,10 @@ caption{
 /*maybe not working*/
 #description:visited {
   color: blue;
+}
+
+#products {
+  caption-side: top;
 }
 
 footer {

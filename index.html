@@ -8,7 +8,22 @@
 
 
 <body>
-  <h1>Phone web shop</h1>
+
+  <!--Navigation bar-->
+  <nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products/">Products</a></li>
+    </ul>
+  </nav>
+
+  <!-- Text -->
+  <section>
+    <h1>Phone web shop</h1>
+    <p>Free shipping for all products until <strong>February 1st</strong></p>
+  </section>
+
 
   <!--Table-->
   <section>
@@ -51,7 +66,7 @@
             <td><label for="model"></label> <input name="model" placeholder="Choose a Model"></td>
             <td><label for="oS"></label> <input name="os" type="text" placeholder="Choose an OS"></td>
             <!--There is a prblem on the line nelow. It looks like the server only accepts integer numbers and not float???-->
-            <td><label for="screensize"></label> <input name="screensize" type="integer" placeholder="Choose a Screensize"></td>
+            <td><label for="screensize"></label> <input name="screensize" type="number" placeholder="Choose a Screensize"></td>
             <td><label for="image"></label> <input name=image placeholder="Choose an Image"></td>
             <td><input type="submit" value = "Submit"></td>
           </form>

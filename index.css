@@ -1,3 +1,4 @@
+/* table */
 #products {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -6,7 +7,7 @@
 
 #products td, #products th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 10px;
 }
 
 #products th {
@@ -15,4 +16,35 @@
   text-align: left;
   background-color: gray;
   color: white;
+}
+
+/* navigation bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: gray;
+}
+
+nav li {
+  display: inline-block
+}
+
+nav li a {
+  display: block;
+  color: white;
+  padding: 15px 30px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #3B99D2;
+}
+
+
+/* text */
+h1 {
+  font-family: sans-serif;
 }

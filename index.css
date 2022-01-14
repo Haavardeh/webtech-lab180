@@ -3,6 +3,8 @@
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   text-align: center;
+  background: #FFFFFF;
+  background-repeat: repeat-y;
 
   width: 100%;
 }
@@ -15,16 +17,18 @@
 .tableClass th {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: gray;
+  background-image: url(https://i.pinimg.com/originals/2f/d5/06/2fd5064bdc6123d004153c6a1d3ea8f7.jpg);
   color: white;
 }
 
-#b{
-  color:black;
+#submitBtn{
+    padding: black;
+    border: 1px
 }
 
-#SC{
-  color: brown;
+#submitBtn:hover{
+  border-color: lightblue;
+  background-color: inherit;
 }
 
 figure {
@@ -39,6 +43,7 @@ figure {
   height: 300px;
   width: 300px;
 }
+
 
 
 
@@ -102,13 +107,17 @@ caption{
   color: green;
 }
 
+#description{
+    color: blue;
+}
+
 #description:link {
   color: green;
 }
 
 /*maybe not working*/
-#description:visited {
-  color: blue;
+#description:active {
+  color: red;
 }
 
 #products {

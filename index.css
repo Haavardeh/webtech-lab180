@@ -1,6 +1,8 @@
 #products {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
+  text-align: center;
+
   width: 100%;
 }
 
@@ -12,7 +14,17 @@
 #products th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: gray;
   color: white;
+}
+caption{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/*We have to find a way to make all the pictures the same size*/
+.picture_phones{
+  object-fit: cover;
+  width: 9rem;
+
 }

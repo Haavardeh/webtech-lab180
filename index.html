@@ -10,9 +10,13 @@
 <body>
   <h1>Phone web shop</h1>
 
+
   <!--Table-->
   <section>
+    <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
       <table id="products">
+        <caption>Phone information</caption>
+        <thead>
         <tr>
           <th>Brand</th>
           <th>Model</th>
@@ -20,43 +24,57 @@
           <th>Screensize</th>
           <th>Image</th>
         </tr>
+      </thead>
+      <tbody>
         <!--Row 1-->
         <tr>
           <td>Apple</td>
           <td>I Phone X</td>
           <td>iOS</td>
           <td>5</td>
-          <td> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px" height="200px"</td>
+          <td> <div class="picture_phones"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px"></div></td>
         </tr>
         <!--Row 2-->
         <tr>
           <td>Samsung</td>
           <td>Galaxy A22</td>
           <td>Android</td>
-          <td>6.4</td>
-          <td><img src="https://www.netonnet.no/GetFile/ProductImagePrimary/telefon-gps/samsung-galaxy-a22-black-lte(1018923)_445160_1_Normal_Large.jpg" alt="Picture of Samsung A22" ></td>
+          <td>7</td>
+          <td><div class="picture_phones"><img src="https://www.netonnet.no/GetFile/ProductImagePrimary/telefon-gps/samsung-galaxy-a22-black-lte(1018923)_445160_1_Normal_Large.jpg" alt="Picture of Samsung A22" width="300"></td>
         </tr>
         <!--Row 3-->
         <tr>
           <td>Huawei</td>
           <td>Y6p</td>
           <td>Emui</td>
-          <td>6.3</td>
-          <td></td>
+          <td>6</td>
+          <td><div class="picture_phones"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" width="200"><div></td>
         </tr>
         <!--Row 4, input field with a form that sends the input to the server using a generated key-->
         <tr>
-          <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
-            <td><label for="brand"></label> <input name="brand" placeholder="Choose a Brand"> </td>
-            <td><label for="model"></label> <input name="model" placeholder="Choose a Model"></td>
-            <td><label for="oS"></label> <input name="os" type="text" placeholder="Choose an OS"></td>
-            <!--There is a prblem on the line nelow. It looks like the server only accepts integer numbers and not float???-->
-            <td><label for="screensize"></label> <input name="screensize" type="integer" placeholder="Choose a Screensize"></td>
-            <td><label for="image"></label> <input name=image placeholder="Choose an Image"></td>
-            <td><input type="submit" value = "Submit"></td>
-          </form>
+          <td>
+            <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
+          <td>
+            <input name="model" type="string" placeholder="Choose a Model" required></td>
+          <td>
+            <input name="os" type="string" placeholder="Choose an OS" required></td>
+          <td>
+            <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
+          <td>
+            <input name=image type="url" placeholder="Choose an Image" required></td>
         </tr>
       </table>
+    </form>
+    <!--Button for submitting input-->
+    <input type="submit" value = "Submit">
+
+    <!--Second table-->
+    <table>
+      <caption>
+
+
+      </caption>
+    </table>
   </section>
 
 </body>

@@ -20,6 +20,9 @@
 }
 
 /* navigation bar */
+nav {
+  background-color: rgb(56,56,56);
+}
 ul {
   list-style-type: none;
   margin: 0;

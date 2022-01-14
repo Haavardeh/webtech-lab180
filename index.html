@@ -40,13 +40,13 @@
   <!--Table-->
   <section>
     <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
-      <table id="products">
+      <table class="tableClass" id="products">
         <caption>Phone information</caption>
         <thead>
         <tr>
           <th>Brand</th>
           <th>Model</th>
-          <th>OS</th>
+          <th><abbr title="Operation system"> OS</abbr></th>
           <th>Screensize</th>
           <th>Image</th>
         </tr>
@@ -95,9 +95,41 @@
     <input type="submit" value = "Submit">
 
     <!--Second table-->
-    <table>
-      <caption> Mobile subscription</caption>
+    <table class="tableClass" id = "subsID">
+      <h2>Mobile phone subscription</h2>
+      <caption> Monthly price</caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th> T mobile</th>
+          <th> Tele 2</th>
+          <th>Mobiel</th>
+          <th>Binding agreement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Apple</th>
+          <td>23 &euro;</td>
+          <td>25 &euro;</td>
+          <td>20 &euro;</td>
+          <td rowspan="2">1 year</abbr>
+        </tr>
+        <tr>
+          <th>Samsung</th>
+          <td>23 &euro;</td>
+          <td>25 &euro;</td>
+          <td>20 &euro;</td>
 
+        </tr>
+        <tr>
+          <th>Huawei</th>
+          <td>20 &euro;</td>
+          <td>21 &euro;</td>
+          <td>19 &euro;</td>
+          <td>Monthly</td>
+        </tr>
+      </tbody>
     </table>
   </section>
 

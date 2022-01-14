@@ -1,5 +1,5 @@
 /* table */
-#products {
+.tableClass {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   text-align: center;
@@ -7,17 +7,27 @@
   width: 100%;
 }
 
-#products td, #products th {
+.tableClass td, .tableClass th{
   border: 1px solid #ddd;
   padding: 10px;
 }
 
-#products th {
+.tableClass th {
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: gray;
   color: white;
 }
+
+#b{
+  color:black;
+}
+
+#SC{
+  color: brown;
+}
+
+
 
 /* navigation bar */
 nav {

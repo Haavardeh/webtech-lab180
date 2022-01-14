@@ -65,3 +65,11 @@ caption{
   object-fit: cover;
   width: 9rem;
 }
+
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: #ddd;
+  color: #202020;
+  font-size: 15px;
+}

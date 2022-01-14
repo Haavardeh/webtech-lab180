@@ -25,7 +25,6 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: gray;
 }
 
 nav li {
@@ -48,6 +47,7 @@ nav li a:hover {
 /* text */
 h1 {
   font-family: sans-serif;
+}
 
 caption{
   font-weight: bold;

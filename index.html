@@ -47,110 +47,108 @@
     </div>
 
 
-    <section class="mainContent"> <!--Section with tables and footer, class used for setting a background image to the maintaing parts-->
+  <div class="mainContent"> <!--Section with tables, class used for setting a background image to the maintaing parts-->
 
       <!--Table-->
-      <section>
-        <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
-          <table class="tableClass" id="products">
-            <caption>Phone information</caption>
-            <thead>
-            <tr>
-              <th>Brand</th>
-              <th>Model</th>
-              <th><abbr title="Operation system"> OS</abbr></th>
-              <th>Screensize</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
+    <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
+      <table class="tableClass" id="products">
+        <caption>Phone information</caption>
+        <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Model</th>
+          <th><abbr title="Operation system"> OS</abbr></th>
+          <th>Screensize</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
             <!--Row 1-->
-            <tr>
-              <td title="Brand">Apple</td>
-              <td title="Model">IPhone X</td>
-              <td title="OS">iOS</td>
-              <td title="Screesize">5</td>
-              <td> <div class="picture_phones"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px"></div></td>
-            </tr>
+        <tr>
+          <td title="Brand">Apple</td>
+          <td title="Model">IPhone X</td>
+          <td title="OS">iOS</td>
+          <td title="Screesize">5</td>
+          <td> <div class="picture_phones"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px"></div></td>
+        </tr>
             <!--Row 2-->
-            <tr>
-              <td title="Brand">Samsung</td>
-              <td title="Model">Galaxy A22</td>
-              <td title="OS">Android</td>
-              <td title="Screesize">7</td>
-              <td><div class="picture_phones"><img src="https://m.media-amazon.com/images/I/71iR5Vx6hTL._AC_SX679_.jpg" alt="Picture of Samsung A22" width="200"></td>
-            </tr>
+        <tr>
+          <td title="Brand">Samsung</td>
+          <td title="Model">Galaxy A22</td>
+          <td title="OS">Android</td>
+          <td title="Screesize">7</td>
+          <td><div class="picture_phones"><img src="https://m.media-amazon.com/images/I/71iR5Vx6hTL._AC_SX679_.jpg" alt="Picture of Samsung A22" width="200"></td>
+        </tr>
             <!--Row 3-->
-            <tr>
-              <td title="Brand">Huawei</td>
-              <td title="Model">Y6p</td>
-              <td title="OS">Emui</td>
-              <td title="Screesize">6</td>
-              <td><div class="picture_phones"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" width="200"><div></td>
-            </tr>
+        <tr>
+          <td title="Brand">Huawei</td>
+          <td title="Model">Y6p</td>
+          <td title="OS">Emui</td>
+          <td title="Screesize">6</td>
+          <td><div class="picture_phones"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" width="200"><div></td>
+        </tr>
             <!--Row 4, input field with a form that sends the input to the server using a generated key-->
-            <tr class="inputClass">
-              <td title="Brand">
-                <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
-              <td title="Model">
-                <input name="model" type="string" placeholder="Choose a Model" required></td>
-              <td title="OS">
-                <input name="os" type="string" placeholder="Choose an OS" required></td>
-              <td title="Screesize">
-                <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
-              <td title="Image">
-                <input name=image type="url" placeholder="Choose an Image" required></td>
-            </tr>
-          </table>
+        <tr class="inputClass">
+          <td title="Brand">
+            <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
+          <td title="Model">
+            <input name="model" type="string" placeholder="Choose a Model" required></td>
+          <td title="OS">
+            <input name="os" type="string" placeholder="Choose an OS" required></td>
+          <td title="Screesize">
+            <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
+          <td title="Image">
+            <input name=image type="url" placeholder="Choose an Image" required></td>
+        </tr>
+      </table>
           <!--Button for submitting input-->
-          <input type="submit" id="submitBtn" value = "Submit">
-      </form>
+      <input type="submit" id="submitBtn" value = "Submit">
+    </form>
 
         <!--Second table-->
-        <table class="tableClass" id = "tableSubs">
-          <h2>Mobile phone subscription</h2>
-          <div id="secTableDescrip">
-            In need for a cheap, accessible mobile subscription?
-            <p id="indentSentence">Dont worry, we will deliever your new phone with the subscription of your choice already installed!</p>
-            Buying a phone in our webshop allows us to offer you great deals for mobile subscription through our partners.
-            Below you can see all the offers from our partners depending on which phone you buy, and which binding agreement you choose.
-          </div>
-          <caption> Monthly price</caption>
-          <thead>
-            <tr>
-              <th id="invisibleTable"></th>
-              <th> T mobile</th>
-              <th> Tele 2</th>
-              <th>Mobiel</th>
-              <th>Binding agreement</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Apple</th>
-              <td title="T mobile">23 &euro;</td>
-              <td title="Tele 2">24 &euro;</td>
-              <td title="Mobiel">22 &euro;</td>
-              <td title="Binding agreement">1 year</td>
-            </tr>
-            <tr>
-              <th>Samsung</th>
-              <td title="T mobile">23 &euro;</td>
-              <td title="Tele 2">22 &euro;</td>
-              <td title="Mobiel">20 &euro;</td>
-              <td title="Binding agreement">1 year</td>
-            </tr>
-            <tr>
-              <th>Huawei</th>
-              <td title="T mobile">20 &euro;</td>
-              <td title="Tele 2">21 &euro;</td>
-              <td title="Mobiel">19 &euro;</td>
-              <td title="Binding agreement">Monthly</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </section>
+      <table class="tableClass" id = "tableSubs">
+        <h2>Mobile phone subscription</h2>
+        <div id="secTableDescrip">
+          In need for a cheap, accessible mobile subscription?
+          <p id="indentSentence">Dont worry, we will deliever your new phone with the subscription of your choice already installed!</p>
+          Buying a phone in our webshop allows us to offer you great deals for mobile subscription through our partners.
+          Below you can see all the offers from our partners depending on which phone you buy, and which binding agreement you choose.
+        </div>
+        <caption> Monthly price</caption>
+        <thead>
+          <tr>
+            <th id="invisibleTable"></th>
+            <th> T mobile</th>
+            <th> Tele 2</th>
+            <th>Mobiel</th>
+            <th>Binding agreement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Apple</th>
+            <td title="T mobile">23 &euro;</td>
+            <td title="Tele 2">24 &euro;</td>
+            <td title="Mobiel">22 &euro;</td>
+            <td title="Binding agreement">1 year</td>
+          </tr>
+          <tr>
+            <th>Samsung</th>
+            <td title="T mobile">23 &euro;</td>
+            <td title="Tele 2">22 &euro;</td>
+            <td title="Mobiel">20 &euro;</td>
+            <td title="Binding agreement">1 year</td>
+          </tr>
+          <tr>
+            <th>Huawei</th>
+            <td title="T mobile">20 &euro;</td>
+            <td title="Tele 2">21 &euro;</td>
+            <td title="Mobiel">19 &euro;</td>
+            <td title="Binding agreement">Monthly</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
 
     <!--info list-->
     <section>
@@ -167,7 +165,6 @@
           <dd>The Huawei Y6p is an affordable smartphone produced by Huawei. Huawei Y6p is released in May 2020 and it comes in a dimension of 159.1 x 74.1 x 9 mm and weighs 185 grams. The screen type is IPS LCD capacitive touchscreen. The size of the screen is 6.3 inches and 720 x 1600 pixels providing 278 PPI density. The smartphone comes with a triple-camera on the rear side that consists of 13 MP (wide) + 5 MP (ultrawide) + 2 MP (depth). On the front, there is a single 8 MP (wide).</dd>
         </dl>
       </div>
-<<<<<<< HEAD
   </section>
 
   <div class="brands" >
@@ -180,11 +177,7 @@
       <li>Blackberry</li>
       <li>NOKIA</li>
     </ul>
-  </section>
-
-=======
-    </section>
->>>>>>> 5922a60 (added style on button and list)
+  </div>
 
     <footer>
       <pre>

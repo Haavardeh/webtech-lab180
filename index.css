@@ -190,7 +190,7 @@ caption{
 }
 
 /*funker ikke*/
-#info dl {
+dl .info {
   list-style-type: circle;
 }
 

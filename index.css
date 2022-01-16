@@ -23,8 +23,27 @@ body {
     top: -9999px;
     left: -9999px;
   }
+  .tableClass tr { border: 1px solid #ccc; }
 
+  /*row content*/
+  .tableClass td {
+  	border: none;
+  	position: relative;
+  	padding-left: 50%;
+  	white-space: normal;
+  	text-align:right;
+  }
 
+  /*titles*/
+  .tableClass td:before {
+  	position: absolute;
+  	top: 5px;
+  	left: 5px;
+  	text-align:left;
+  	font-weight: bold;
+  }
+
+  .tableClass td:before { content: attr(title); }
 }
 
 .intro {
@@ -129,9 +148,6 @@ caption{
   background-color: #3B99D2;
 }
 
-/*new table*/
-
-
 
 figure {
   display: block;
@@ -142,8 +158,8 @@ figure {
 }
 
 #new {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   border: 1px solid;
   border-color: rgb(56,56,56);
 }
@@ -190,7 +206,7 @@ caption{
 }
 
 /*funker ikke*/
-dl .info {
+#info dl {
   list-style-type: circle;
 }
 

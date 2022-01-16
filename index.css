@@ -2,6 +2,7 @@ body {
   background-image:url(https://www.designbolts.com/wp-content/uploads/2013/02/Zebra-3D-Grey-Seamless-Pattern-For-Website-Background.jpg);
   background-repeat: repeat;
   width: 100%;
+  margin: 0px;
 }
 
 @media
@@ -40,7 +41,6 @@ body {
   margin-right: auto;
   list-style-position: inside;
 }
-
 
 /* table */
 .tableClass {

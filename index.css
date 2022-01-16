@@ -6,7 +6,7 @@ body {
 }
 
 /*Adding a margin on the sides of to all content except header and footer*/
-.mainContent{
+.mainContent {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -26,6 +26,7 @@ body {
     top: -9999px;
     left: -9999px;
   }
+
   .tableClass tr { border: 1px solid lightGray; }
 
   /*row content*/
@@ -46,7 +47,7 @@ body {
   }
 
   .tableClass td:before { content: attr(title); }
-}
+} /*end of media*/
 
 .intro {
   text-align: center;
@@ -67,13 +68,13 @@ body {
   table-layout:fixed;
 }
 
-.tableClass td, .tableClass th{
+.tableClass td, .tableClass th {
   border: 1px solid #ddd;
   padding: 10px;
   background-color: white;
 }
 
-.tableClass th{
+.tableClass th {
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #ddd;
@@ -82,7 +83,7 @@ body {
   color: black;
 }
 
-.inputClass input:focus{
+.inputClass input:focus {
   background-color: rgb(245,245,245);
 
 }
@@ -95,16 +96,16 @@ body {
 }
 
 /*Making upper left block invisible while keeping its position*/
-#invisibleTable{
+#invisibleTable {
   display: inherit;
 }
 
 
-#secTableDescrip{
+#secTableDescrip {
   font-size: 20px;
-
 }
-#indentSentence{
+
+#indentSentence {
   text-indent: 2%;
   font-style: oblique;
 }
@@ -113,23 +114,22 @@ body {
 h1 {
   font-family: sans-serif;
   text-transform: capitalize;
-
 }
 
 /*Transforming the letters of second level headers to uppercase*/
-h2{
+h2 {
   text-transform: uppercase;
   font-family: sans-serif;
 }
 /*Transfrming headers of tables to capitalize first letter of each word*/
-caption{
+caption {
   text-transform: capitalize;
 }
 
 
 
 /**Submit button. Shorthand use of font variant, size, and family*/
-#submitBtn{
+#submitBtn {
   font: small-caps 1rem sans-serif;
   margin-top: 10px;
   padding: black;
@@ -146,13 +146,13 @@ caption{
 }
 
 /*Selectrs for submit button*/
-#submitBtn:hover{
+#submitBtn:hover {
   border-color: lightblue;
   background-color: #3B99D2;
   font-weight: bold;
 }
 
-#topThreeList{
+#topThreeList {
   list-style-type: lower-roman;
 }
 
@@ -281,6 +281,7 @@ footer {
 }
 
 @media print {
+  h2 {page-break-before: always;}
   footer {page-break-after: always;}
 }
 

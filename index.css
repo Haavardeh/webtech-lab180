@@ -307,7 +307,7 @@ footer {
 }
 
 @media print {
-  h2 {page-break-before: always;}
+  table {page-break-before: always;}
   footer {page-break-after: always;}
 }
 

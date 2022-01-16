@@ -223,11 +223,9 @@ caption{
 
 /*funker ikke*/
 .brands ul{
-  list-style: none;
-  list-style-image:url(https://images.vexels.com/media/users/3/156385/isolated/lists/4f64b01c22f5a8386e1a8c4c9a6ca43e-star-cute-icon.png);
-  list-style-type: square; /*In case the image is unavailable*/
-  list-style-position: inside;
+
 }
+
 
 
 

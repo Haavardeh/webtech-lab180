@@ -9,157 +9,160 @@
 
 
 <body>
-<!--Check chapter 5, print/ mobile format-->
-  <link rel="icon" href="https://www.pinclipart.com/picdir/big/49-490256_box-phone-svg-png-icon-free-call-vector.png">
+  <div class="intro">
 
-  <!--Navigation bar-->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products/">Products</a></li>
-    </ul>
-  </nav>
+    <!--Check chapter 5, print/ mobile format-->
+      <link rel="icon" href="https://www.pinclipart.com/picdir/big/49-490256_box-phone-svg-png-icon-free-call-vector.png">
 
-  <!-- Text -->
-  <section>
-    <h1>Phone web shop</h1>
-    <p>Free shipping for all products <em>over 150 €</em> until <strong>February 1st</strong></p>
-  </section>
+      <!--Navigation bar-->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products/">Products</a></li>
+        </ul>
+      </nav>
 
-  <section>
-    <h2> Top three selling products </h2>
-    <ol>
-      <li>Iphone X</li>
-      <li>Galaxy A22</li>
-      <li>Huawei Y6p</li>
-    </ol>
-    <a href="#info" id=description>More information about the products</a>
-  </section>
+      <!-- Text -->
+      <section>
+        <h1>Phone web shop</h1>
+        <p>Free shipping for all products <em>over 150 €</em> until <strong>February 1st</strong></p>
+      </section>
 
-  <figure>
-    <img src="https://media.router-switch.com/media/catalog/product/cache/b90fceee6a5fa7acd36a04c7b968181c/s/a/samsung-galaxy-s22-5g.jpg" id="new">
-    <figcaption>Newest release</figcaption>
-  </figure>
+      <section>
+        <h2> Top three selling products </h2>
+        <ol>
+          <li>Iphone X</li>
+          <li>Galaxy A22</li>
+          <li>Huawei Y6p</li>
+        </ol>
+        <a href="#info" id=description>More information about the products</a>
+      </section>
 
-  <!--Table-->
-  <section>
-    <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
-      <table class="tableClass" id="products">
-        <caption>Phone information</caption>
-        <thead>
-        <tr>
-          <th>Brand</th>
-          <th>Model</th>
-          <th><abbr title="Operation system"> OS</abbr></th>
-          <th>Screensize</th>
-          <th>Image</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!--Row 1-->
-        <tr>
-          <td>Apple</td>
-          <td>IPhone X</td>
-          <td>iOS</td>
-          <td>5</td>
-          <td> <div class="picture_phones"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px"></div></td>
-        </tr>
-        <!--Row 2-->
-        <tr>
-          <td>Samsung</td>
-          <td>Galaxy A22</td>
-          <td>Android</td>
-          <td>7</td>
-          <td><div class="picture_phones"><img src="https://www.netonnet.no/GetFile/ProductImagePrimary/telefon-gps/samsung-galaxy-a22-black-lte(1018923)_445160_1_Normal_Large.jpg" alt="Picture of Samsung A22" width="300"></td>
-        </tr>
-        <!--Row 3-->
-        <tr>
-          <td>Huawei</td>
-          <td>Y6p</td>
-          <td>Emui</td>
-          <td>6</td>
-          <td><div class="picture_phones"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" width="200"><div></td>
-        </tr>
-        <!--Row 4, input field with a form that sends the input to the server using a generated key-->
-        <tr>
-          <td>
-            <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
-          <td>
-            <input name="model" type="string" placeholder="Choose a Model" required></td>
-          <td>
-            <input name="os" type="string" placeholder="Choose an OS" required></td>
-          <td>
-            <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
-          <td>
-            <input name=image type="url" placeholder="Choose an Image" required></td>
-        </tr>
-      </table>
-      <!--Button for submitting input-->
-      <input type="submit" id="submitBtn" value = "Submit">
-  </form>
+      <figure>
+        <img src="https://media.router-switch.com/media/catalog/product/cache/b90fceee6a5fa7acd36a04c7b968181c/s/a/samsung-galaxy-s22-5g.jpg" id="new">
+        <figcaption>Newest release</figcaption>
+      </figure>
+    </div>
+    <section class="mainContent"> <!--Section with tables and footer, class used for setting a background image to the maintaing parts-->
 
-    <!--Second table-->
-    <table class="tableClass" id = "subsID">
-      <h2>Mobile phone subscription</h2>
-      <caption> Monthly price</caption>
-      <thead>
-        <tr>
-          <th></th>
-          <th> T mobile</th>
-          <th> Tele 2</th>
-          <th>Mobiel</th>
-          <th>Binding agreement</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Apple</th>
-          <td>23 &euro;</td>
-          <td>25 &euro;</td>
-          <td>20 &euro;</td>
-          <td rowspan="2">1 year</abbr>
-        </tr>
-        <tr>
-          <th>Samsung</th>
-          <td>23 &euro;</td>
-          <td>25 &euro;</td>
-          <td>20 &euro;</td>
+      <!--Table-->
+      <section>
+        <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
+          <table class="tableClass" id="products">
+            <caption>Phone information</caption>
+            <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Model</th>
+              <th><abbr title="Operation system"> OS</abbr></th>
+              <th>Screensize</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--Row 1-->
+            <tr>
+              <td>Apple</td>
+              <td>IPhone X</td>
+              <td>iOS</td>
+              <td>5</td>
+              <td> <div class="picture_phones"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" width="100px"></div></td>
+            </tr>
+            <!--Row 2-->
+            <tr>
+              <td>Samsung</td>
+              <td>Galaxy A22</td>
+              <td>Android</td>
+              <td>7</td>
+              <td><div class="picture_phones"><img src="https://www.netonnet.no/GetFile/ProductImagePrimary/telefon-gps/samsung-galaxy-a22-black-lte(1018923)_445160_1_Normal_Large.jpg" alt="Picture of Samsung A22" width="300"></td>
+            </tr>
+            <!--Row 3-->
+            <tr>
+              <td>Huawei</td>
+              <td>Y6p</td>
+              <td>Emui</td>
+              <td>6</td>
+              <td><div class="picture_phones"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" width="200"><div></td>
+            </tr>
+            <!--Row 4, input field with a form that sends the input to the server using a generated key-->
+            <tr>
+              <td>
+                <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
+              <td>
+                <input name="model" type="string" placeholder="Choose a Model" required></td>
+              <td>
+                <input name="os" type="string" placeholder="Choose an OS" required></td>
+              <td>
+                <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
+              <td>
+                <input name=image type="url" placeholder="Choose an Image" required></td>
+            </tr>
+          </table>
+          <!--Button for submitting input-->
+          <input type="submit" id="submitBtn" value = "Submit">
+      </form>
 
-        </tr>
-        <tr>
-          <th>Huawei</th>
-          <td>20 &euro;</td>
-          <td>21 &euro;</td>
-          <td>19 &euro;</td>
-          <td>Monthly</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+        <!--Second table-->
+        <table class="tableClass" id = "tableSubs">
+          <h2>Mobile phone subscription</h2>
+          <caption> Monthly price</caption>
+          <thead>
+            <tr>
+              <th id="invisibleTable"></th>
+              <th> T mobile</th>
+              <th> Tele 2</th>
+              <th>Mobiel</th>
+              <th>Binding agreement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Apple</th>
+              <td>23 &euro;</td>
+              <td>24 &euro;</td>
+              <td>22 &euro;</td>
+              <td rowspan="2">1 year</abbr>
+            </tr>
+            <tr>
+              <th>Samsung</th>
+              <td>23 &euro;</td>
+              <td>22 &euro;</td>
+              <td>20 &euro;</td>
+            </tr>
+            <tr>
+              <th>Huawei</th>
+              <td>20 &euro;</td>
+              <td>21 &euro;</td>
+              <td>19 &euro;</td>
+              <td>Monthly</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-  <!--info list-->
-  <div id="info">
-    <h2> Phone description </h2>
-    <dl>
-      <dt>Iphone X</dt>
-      <dd>The iPhone X is a smartphone designed, developed, marketed, produced, and sold by Apple Inc. The 11th generation of the iPhone, it was available to pre-order on October 27, 2017, and was released on November 3, 2017. The iPhone X used a glass and stainless-steel form factor and "bezel-less" design, shrinking the bezels while not having a "chin", unlike many Android phones.</dd>
+      <!--info list-->
+      <div id="info">
+        <h2> Phone description </h2>
+        <dl>
+          <dt>Iphone X</dt>
+          <dd>The iPhone X is a smartphone designed, developed, marketed, produced, and sold by Apple Inc. The 11th generation of the iPhone, it was available to pre-order on October 27, 2017, and was released on November 3, 2017. The iPhone X used a glass and stainless-steel form factor and "bezel-less" design, shrinking the bezels while not having a "chin", unlike many Android phones.</dd>
 
-      <dt>Galaxy A22</dt>
-      <dd>The Samsung Galaxy A22 is a mid-range Android-based smartphone developed and manufactured by Samsung Electronics as a part of its Galaxy A series. The phone was first released on 24 June 2021. The phone comes with a triple rear camera setup and a 90 Hz display. The Samsung Galaxy A22 5G has a 6.6 inch Infinity-V display with a V-shaped notch at top. The frame and the back panel of the device is made of plastic. There is a side-mounted capacitive fingerprint reader at the right side and a triple rear camera setup with an LED flash at the back</dd>
+          <dt>Galaxy A22</dt>
+          <dd>The Samsung Galaxy A22 is a mid-range Android-based smartphone developed and manufactured by Samsung Electronics as a part of its Galaxy A series. The phone was first released on 24 June 2021. The phone comes with a triple rear camera setup and a 90 Hz display. The Samsung Galaxy A22 5G has a 6.6 inch Infinity-V display with a V-shaped notch at top. The frame and the back panel of the device is made of plastic. There is a side-mounted capacitive fingerprint reader at the right side and a triple rear camera setup with an LED flash at the back</dd>
 
-      <dt>Huawei Y6p</dt>
-      <dd>The Huawei Y6p is an affordable smartphone produced by Huawei. Huawei Y6p is released in May 2020 and it comes in a dimension of 159.1 x 74.1 x 9 mm and weighs 185 grams. The screen type is IPS LCD capacitive touchscreen. The size of the screen is 6.3 inches and 720 x 1600 pixels providing 278 PPI density. The smartphone comes with a triple-camera on the rear side that consists of 13 MP (wide) + 5 MP (ultrawide) + 2 MP (depth). On the front, there is a single 8 MP (wide).</dd>
-  </dl>
-  </div>
+          <dt>Huawei Y6p</dt>
+          <dd>The Huawei Y6p is an affordable smartphone produced by Huawei. Huawei Y6p is released in May 2020 and it comes in a dimension of 159.1 x 74.1 x 9 mm and weighs 185 grams. The screen type is IPS LCD capacitive touchscreen. The size of the screen is 6.3 inches and 720 x 1600 pixels providing 278 PPI density. The smartphone comes with a triple-camera on the rear side that consists of 13 MP (wide) + 5 MP (ultrawide) + 2 MP (depth). On the front, there is a single 8 MP (wide).</dd>
+        </dl>
+      </div>
+    </section>
+    <footer>
+      <pre>
+      Contact us
+      Phone: +31 12345678
+      <a href="mailto:oslo@example.com" id=mail>oslo@example.com</a>
+      </pre>
+    </footer>
 
-  <footer>
-    <pre>
-    Contact us
-    Phone: +31 12345678
-    <a href="mailto:oslo@example.com" id=mail>oslo@example.com</a>
-    </pre>
-  </footer>
-
-</body>
+  </body>
 </html>

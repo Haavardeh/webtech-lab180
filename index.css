@@ -105,6 +105,7 @@ h1 {
 /*Transforming the letters of second level headers to uppercase*/
 h2{
   text-transform: uppercase;
+  font-family: sans-serif;
 }
 /*Transfrming headers of tables to capitalize first letter of each word*/
 caption{

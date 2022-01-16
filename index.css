@@ -59,13 +59,18 @@ body {
   background-color: white;
 }
 
-.tableClass th {
+.tableClass th{
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #ddd;
   border:1px solid;
   border-color: rgb(56,56,56);
   color: black;
+}
+
+.inputClass input:focus{
+  background-color: rgb(245,245,245);
+
 }
 
 #tableSubs {
@@ -81,18 +86,46 @@ body {
 }
 
 
+#secTableDescrip{
+  font-size: 20px;
+
+}
+#indentSentence{
+  text-indent: 2%;
+  font-style: oblique;
+}
+
+/* Header */
+h1 {
+  font-family: sans-serif;
+  text-transform: capitalize;
+
+}
+
+/*Transforming the letters of second level headers to uppercase*/
+h2{
+  text-transform: uppercase;
+}
+/*Transfrming headers of tables to capitalize first letter of each word*/
+caption{
+  text-transform: capitalize;
+}
+
+
+
+/**Submit button. Shorthand use of font variant, size, and family*/
 #submitBtn{
-    padding: black;
-    width: 200px;
-    height: 50px;
-    border: solid;
-    border-style: outset;
-    border-width: medium;
-    border-radius: 15px;
-    border-color: lightblue;
-    padding: 15px 30px;
-    font-family: sans-serif;
-    font-size: 1rem;
+  font: small-caps 1rem sans-serif;
+  padding: black;
+  width: 200px;
+  height: 50px;
+  border: solid;
+  border-style: outset;
+  border-width: medium;
+  border-radius: 15px;
+  border-color: lightblue;
+  padding: 15px 30px;
+
 
 }
 
@@ -152,10 +185,8 @@ figure {
   background-color: #3B99D2;
 }
 
-/* text */
-h1 {
-  font-family: sans-serif;
-}
+
+
 
 caption{
   font-weight: bold;
@@ -179,21 +210,37 @@ caption{
   text-decoration: none;
 }
 
+#mail:hover{
+  font-size:1rem;
+}
+
 #mail:active {
   color: green;
 }
 
+#mail:visited{
+  color: yellow;
+}
+
+
 #description{
-    color: blue;
+    color: #3B99D2;
 }
 
 #description:link {
   color: green;
 }
 
-/*maybe not working*/
+#description:hover{
+    font-size: 1.2rem;
+}
+
 #description:active {
   color: red;
+}
+
+#description:visited{
+  color: purple;
 }
 
 #products {

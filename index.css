@@ -49,7 +49,14 @@ body {
   .tableClass td:before { content: attr(title); }
 
 } /*end of media*/
+h1.logo {
+  vertical-align: sub;
+}
 
+.logo {
+  width: 15px;
+  height: 15px;
+}
 .intro {
   text-align: center;
   display: block;
@@ -266,7 +273,7 @@ caption{
 }
 
 #description:visited{
-  color: purple;
+  color: darkBlue;
 }
 
 #products {

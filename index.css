@@ -55,7 +55,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  list-style-position: inside;
 }
 
 /* table */
@@ -155,6 +154,7 @@ caption {
 
 #topThreeList {
   list-style-type: lower-roman;
+  list-style-position: inside;
 }
 
 
@@ -215,9 +215,14 @@ caption{
 }
 
 /*funker ikke*/
-#info dl dd{
-  list-style-type: circle;
+.brands ul{
+  list-style: none;
+  list-style-image:url(https://images.vexels.com/media/users/3/156385/isolated/lists/4f64b01c22f5a8386e1a8c4c9a6ca43e-star-cute-icon.png);
+  list-style-type: square; /*In case the image is unavailable*/
+  list-style-position: inside;
 }
+
+
 
 
 /*We have to find a way to make all the pictures the same size.*/

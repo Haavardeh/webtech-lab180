@@ -5,6 +5,12 @@ body {
   margin: 0px;
 }
 
+/*Adding a margin on the sides of to all content except header and footer*/
+.mainContent{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @media
   only screen
   and (max-width: 760px), (min-device-width: 768px)
@@ -129,6 +135,7 @@ caption{
 /**Submit button. Shorthand use of font variant, size, and family*/
 #submitBtn{
   font: small-caps 1rem sans-serif;
+  margin-top: 10px;
   padding: black;
   width: 200px;
   height: 50px;
@@ -146,7 +153,15 @@ caption{
 #submitBtn:hover{
   border-color: lightblue;
   background-color: #3B99D2;
+  font-weight: bold;
 }
+
+#topThreeList{
+  list-style-type: lower-roman;
+
+
+}
+
 
 
 figure {
@@ -206,7 +221,7 @@ caption{
 }
 
 /*funker ikke*/
-#info dl {
+#info dl dd{
   list-style-type: circle;
 }
 

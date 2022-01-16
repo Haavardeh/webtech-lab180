@@ -1,3 +1,47 @@
+body {
+  background-image:url(https://www.designbolts.com/wp-content/uploads/2013/02/Zebra-3D-Grey-Seamless-Pattern-For-Website-Background.jpg);
+  background-repeat: repeat;
+  width: 100%;
+}
+
+@media
+  only screen
+  and (max-width: 760px), (min-device-width: 768px)
+  and (max-device-width: 1024px)  {
+
+  .tableClass table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  .tableClass table {
+    text-align: center;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .tableClass thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .tableClass td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+}
+
+.intro {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-position: inside;
+}
+
+
 /* table */
 .tableClass {
   font-family: Arial, Helvetica, sans-serif;
@@ -6,6 +50,7 @@
   background: #FFFFFF;
   background-repeat: repeat-y;
   width: 100%;
+  table-layout:fixed;
 }
 
 .tableClass td, .tableClass th{
@@ -36,9 +81,6 @@
 }
 
 
-
-
-
 #submitBtn{
     padding: black;
     width: 200px;
@@ -53,18 +95,17 @@
     font-size: 1rem;
 
 }
+
 /*Selectrs for submit button*/
 #submitBtn:hover{
   border-color: lightblue;
   background-color: #3B99D2;
 }
 
+/*new table*/
 
 
-body{
-  background-image:url(https://www.designbolts.com/wp-content/uploads/2013/02/Zebra-3D-Grey-Seamless-Pattern-For-Website-Background.jpg);
-  background-repeat: repeat;
-}
+
 figure {
   display: block;
   margin-top: 1em;
@@ -81,38 +122,35 @@ figure {
 }
 
 
-
-
 /* navigation bar */
-nav {
-  background-color: rgb(56,56,56);
+.nav {
+  background-color: rgb(0, 66, 128);
+  height: 6vh;
+  width: 100%;
 }
-ul {
+
+.nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-nav li {
-  display: inline-block
+.nav li {
+  display: inline-block;
 }
 
-@media print{
-/*For later: media print code here. Everything from this function to the top of the document*/
-}
-nav li a {
+.nav li a {
   display: block;
   color: white;
-  padding: 15px 30px;
+  padding: 12px 30px;
   font-family: sans-serif;
   text-decoration: none;
 }
 
-nav li a:hover {
+.nav li a:hover {
   background-color: #3B99D2;
 }
-
 
 /* text */
 h1 {
@@ -124,19 +162,21 @@ caption{
   font-size: 2rem;
 }
 
+/*funker ikke*/
 #info dl {
   list-style-type: circle;
 }
 
 
-/*We have to find a way to make all the pictures the same size*/
+/*We have to find a way to make all the pictures the same size.*/
 .picture_phones{
   object-fit: cover;
   width: 9rem;
 }
 
-#mail:link {
-  color: #3B99D2;
+#mail:link  {
+  color: rgb(128, 193, 255);
+  text-decoration: none;
 }
 
 #mail:active {
@@ -163,7 +203,15 @@ caption{
 footer {
   text-align: center;
   padding: 1px;
-  background-color: rgb(56,56,56);
+  background-color: rgb(0, 66, 128);
   color: white;
   font-size: 15px;
+}
+
+img  {
+  float: none;
+}
+
+@media print{
+/*For later: media print code here. Everything from this function to the top of the document*/
 }

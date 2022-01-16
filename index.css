@@ -271,8 +271,9 @@ caption{
   margin: 25px 50px 75px 100px;
 }
 
-img  {
-  float: none;
+#info img {
+  float: right;
+  width: 400px;
 }
 
 footer {

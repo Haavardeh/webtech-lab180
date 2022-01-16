@@ -224,7 +224,7 @@ caption{
 /*funker ikke*/
 .brands ul{
   list-style: none;
-  list-style-image:linear-gradient(to right top, darkBlue, lightblue);;
+  list-style-image:linear-gradient(to right top, lightBlue, darkBlue);;
   list-style-type: square; /*In case the image is unavailable*/
   list-style-position: inside;
 }

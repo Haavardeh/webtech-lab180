@@ -11,6 +11,7 @@ body {
   margin-right: 10px;
 }
 
+/*Responsive design*/
 @media
   only screen
   and (max-width: 760px), (min-device-width: 768px)
@@ -20,20 +21,15 @@ body {
     display: block;
   }
 
-  .tableClass table {
-    text-align: center;
-  }
-
   .tableClass thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  .tableClass tr { border: 1px solid #ccc; }
+  .tableClass tr { border: 1px solid lightGray; }
 
   /*row content*/
   .tableClass td {
-  	border: none;
   	position: relative;
   	padding-left: 50%;
   	white-space: normal;
@@ -45,8 +41,8 @@ body {
   	position: absolute;
   	top: 5px;
   	left: 5px;
+    font-weight: bold;
   	text-align:left;
-  	font-weight: bold;
   }
 
   .tableClass td:before { content: attr(title); }
@@ -229,7 +225,7 @@ caption{
 /*We have to find a way to make all the pictures the same size.*/
 .picture_phones{
   object-fit: cover;
-  width: 9rem;
+  width: 200;
 }
 
 #mail:link  {

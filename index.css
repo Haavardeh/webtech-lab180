@@ -221,16 +221,15 @@ caption{
   font-size: 2rem;
 }
 
-/*funker ikke*/
+
 .brands ul{
   list-style: none;
-  list-style-image:linear-gradient(to right top, lightBlue, darkBlue);;
-  list-style-type: square; /*In case the image is unavailable*/
+  list-style-image:linear-gradient(to right top, lightBlue, darkBlue);
+  list-style-type: square;
   list-style-position: inside;
 }
 
 
-/*We have to find a way to make all the pictures the same size.*/
 .picture_phones{
   object-fit: cover;
   width: 200;

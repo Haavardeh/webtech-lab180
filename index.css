@@ -47,6 +47,7 @@ body {
   }
 
   .tableClass td:before { content: attr(title); }
+
 } /*end of media*/
 
 .intro {
@@ -274,6 +275,18 @@ caption{
 #info img {
   float: right;
   width: 400px;
+}
+
+#iphone {
+  width: 100px;
+}
+
+#samsung {
+  width: 150px;
+}
+
+#huawei {
+  width: 200px;
 }
 
 footer {

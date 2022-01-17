@@ -307,4 +307,5 @@ footer {
 @media print {
   table {page-break-before: always;}
   footer {page-break-after: always;}
+  p {orphans: 3;}
 }

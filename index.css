@@ -6,9 +6,9 @@ body {
 }
 
 /*Adding a margin on the sides of to all content except header and footer*/
-.mainContent {
-  margin-left: 10px;
-  margin-right: 10px;
+.firstTable {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /*Responsive design*/
@@ -16,6 +16,7 @@ body {
   only screen
   and (max-width: 760px), (min-device-width: 768px)
   and (max-device-width: 1024px)  {
+
 
   .tableClass table, thead, tbody, tr, th, td {
     display: block;
@@ -111,6 +112,8 @@ h1.logo {
 
 #secTableDescrip {
   font-size: 20px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #indentSentence {
@@ -209,9 +212,15 @@ figure {
   background-color: #3B99D2;
 }
 
+
 caption{
   font-weight: bold;
   font-size: 2rem;
+}
+
+.brands{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .brands ul{
@@ -219,7 +228,6 @@ caption{
   list-style-image:linear-gradient(to right top, lightBlue, darkBlue);
   list-style-type: square;
   list-style-position: inside;
-  margin: 25px 50px 75px 100px;
 }
 
 .picture_phones{
@@ -278,10 +286,13 @@ dd{
 #info img {
   float: right;
   width: 400px;
+  margin-left:10px;
 }
 
 #info{
-  margin-left: 100px
+  margin-left: 1em;
+  margin-right: 1em;
+
 }
 
 #iphone {

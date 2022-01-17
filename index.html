@@ -43,71 +43,72 @@
     </figure>
   </div>
 
+  <div class="mainContent">
+    <div class="firstTable"> <!--Section with tables, class used for setting a margin on the content except footer and header-->
 
-  <div class="mainContent"> <!--Section with tables, class used for setting a background image to the maintaing parts-->
-
-    <!--Table-->
-    <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
-      <table class="tableClass" id="products">
-        <caption>Phone information</caption>
-        <thead>
-        <tr>
-          <th>Brand</th>
-          <th>Model</th>
-          <th><abbr title="Operation system"> OS</abbr></th>
-          <th>Screensize</th>
-          <th>Image</th>
-        </tr>
-      </thead>
-      <tbody>
-        <div class=picture_phones>
-            <!--Row 1-->
+      <!--Table-->
+      <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
+        <table class="tableClass" id="products">
+          <caption>Phone information</caption>
+          <thead>
           <tr>
-            <td title="Brand">Apple</td>
-            <td title="Model">IPhone X</td>
-            <td title="OS">iOS</td>
-            <td title="Screesize">5</td>
-            <td title="Image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" id="iphone"></td>
+            <th>Brand</th>
+            <th>Model</th>
+            <th><abbr title="Operation system"> OS</abbr></th>
+            <th>Screensize</th>
+            <th>Image</th>
           </tr>
-              <!--Row 2-->
-          <tr>
-            <td title="Brand">Samsung</td>
-            <td title="Model">Galaxy A22</td>
-            <td title="OS">Android</td>
-            <td title="Screesize">7</td>
-            <td title="Image"><img src="https://m.media-amazon.com/images/I/71iR5Vx6hTL._AC_SX679_.jpg" alt="Picture of Samsung A22" id="samsung"></td>
-          </tr>
-              <!--Row 3-->
-          <tr>
-            <td title="Brand">Huawei</td>
-            <td title="Model">Y6p</td>
-            <td title="OS">Emui</td>
-            <td title="Screesize">6</td>
-            <td title="Image"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" id="huawei"></td>
-          </tr>
-              <!--Row 4, input field with a form that sends the input to the server using a generated key-->
-          <tr class="inputClass">
-            <td title="Brand">
-              <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
-            <td title="Model">
-              <input name="model" type="string" placeholder="Choose a Model" required></td>
-            <td title="OS">
-              <input name="os" type="string" placeholder="Choose an OS" required></td>
-            <td title="Screesize">
-              <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
-            <td title="Image">
-              <input name=image type="url" placeholder="Choose an Image" required></td>
-          </tr>
-        </table>
-          <!--Button for submitting input-->
-      <input type="submit" id="submitBtn" value = "Submit">
-      </div>   <!--picture phones class-->
-    </form>
-
+        </thead>
+        <tbody>
+          <div class=picture_phones>
+              <!--Row 1-->
+            <tr>
+              <td title="Brand">Apple</td>
+              <td title="Model">IPhone X</td>
+              <td title="OS">iOS</td>
+              <td title="Screesize">5</td>
+              <td title="Image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" id="iphone"></td>
+            </tr>
+                <!--Row 2-->
+            <tr>
+              <td title="Brand">Samsung</td>
+              <td title="Model">Galaxy A22</td>
+              <td title="OS">Android</td>
+              <td title="Screesize">7</td>
+              <td title="Image"><img src="https://m.media-amazon.com/images/I/71iR5Vx6hTL._AC_SX679_.jpg" alt="Picture of Samsung A22" id="samsung"></td>
+            </tr>
+                <!--Row 3-->
+            <tr>
+              <td title="Brand">Huawei</td>
+              <td title="Model">Y6p</td>
+              <td title="OS">Emui</td>
+              <td title="Screesize">6</td>
+              <td title="Image"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" id="huawei"></td>
+            </tr>
+                <!--Row 4, input field with a form that sends the input to the server using a generated key-->
+            <tr class="inputClass">
+              <td title="Brand">
+                <input name="brand" type="string" placeholder="Choose a Brand" required> </td>
+              <td title="Model">
+                <input name="model" type="string" placeholder="Choose a Model" required></td>
+              <td title="OS">
+                <input name="os" type="string" placeholder="Choose an OS" required></td>
+              <td title="Screesize">
+                <input name="screensize" type="integer" placeholder="Choose a Screensize" required></td>
+              <td title="Image">
+                <input name=image type="url" placeholder="Choose an Image" required></td>
+            </tr>
+          </table>
+            <!--Button for submitting input-->
+        <input type="submit" id="submitBtn" value = "Submit">
+        </div>   <!--picture phones class-->
+      </form>
+    </div> <!-- firstTable-->
         <!--Second table-->
-      <table class="tableClass" id = "tableSubs">
+      <div id="secTableDescrip">
+        <table class="tableClass" id = "tableSubs">
         <h2>Mobile phone subscription</h2>
-        <div id="secTableDescrip">
+
           In need for a cheap, accessible mobile subscription?
           <p id="indentSentence">Dont worry, we will deliever your new phone with the subscription of your choice already installed!</p>
           Buying a phone in our webshop allows us to offer you great deals for mobile subscription through our partners.
@@ -177,7 +178,7 @@
         <li>NOKIA</li>
       </ul>
     </div>
-  </div> <!-- End of mainContent-->
+  </div>
 
   <footer>
     <pre>

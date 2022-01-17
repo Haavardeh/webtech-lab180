@@ -229,9 +229,6 @@ caption{
   list-style-position: inside;
 }
 
-.picture_phones{
-  object-fit: cover;
-}
 
 dd{
   display: list-item;

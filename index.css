@@ -222,6 +222,7 @@ caption{
   list-style-image:linear-gradient(to right top, lightBlue, darkBlue);
   list-style-type: square;
   list-style-position: inside;
+  margin: 25px 50px 75px 100px;
 }
 
 .picture_phones{
@@ -271,13 +272,20 @@ caption{
   caption-side: top;
 }
 
-.brands ul{
-  margin: 25px 50px 75px 100px;
-}
+
 
 #info img {
   float: right;
   width: 400px;
+}
+
+#info{
+  margin-left: 100px
+}
+
+dd{
+  display: list-item;
+  list-style: circle outside;
 }
 
 #iphone {

@@ -14,8 +14,7 @@ body {
 /*Responsive design*/
 @media
   only screen
-  and (max-width: 760px), (min-device-width: 768px)
-  and (max-device-width: 1024px)  {
+  and (max-width: 768px)  {
 
 
   .tableClass table, thead, tbody, tr, th, td {
@@ -232,7 +231,6 @@ caption{
 
 .picture_phones{
   object-fit: cover;
-  width: 200;
 }
 
 dd{
@@ -318,4 +316,7 @@ footer {
 @media print {
   table {page-break-before: always;}
   footer {page-break-after: always;}
+  #info {page-break-before: always;}
+  #indentSentence p {orphans: 3;}
+  #info dd {widows: 3;}
 }

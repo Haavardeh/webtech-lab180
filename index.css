@@ -318,5 +318,7 @@ footer {
 @media print {
   table {page-break-before: always;}
   footer {page-break-after: always;}
-  p {orphans: 3;}
+  #info {page-break-before: always;}
+  #indentSentence p {orphans: 3;}
+  #info dd {widows: 3;}
 }

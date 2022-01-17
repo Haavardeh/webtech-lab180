@@ -235,12 +235,6 @@ dd{
   list-style: circle outside;
 }
 
-#title {
-  font-weight: bold;
-  font-size:2rem;
-  font-family: sans-serif;
-}
-
 #mail:link  {
   color: rgb(128, 193, 255);
   text-decoration: none;

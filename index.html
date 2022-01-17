@@ -27,6 +27,7 @@
       <p>Free shipping for all products <em>over 150 €</em> until <strong>February 1st</strong></p>
     </section>
 
+    <!--List of the top 3 most sold products-->
     <section>
       <h2> Top three selling products </h2>
       <ol id="topThreeList">
@@ -46,7 +47,7 @@
   <div class="mainContent">
     <div class="firstTable"> <!--Section with tables, class used for setting a margin on the content except footer and header-->
 
-      <!--Table-->
+      <!--First Table inside a form-->
       <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
         <table class="tableClass" id="products">
           <caption>Phone information</caption>
@@ -102,11 +103,11 @@
             <!--Button for submitting input-->
         <input type="submit" id="submitBtn" value = "Submit">
       </form>
-    </div> <!-- firstTable-->
+    </div> <!--closing firstTable-->
+
         <!--Second table-->
       <div id="secTableDescrip">
         <h2>Mobile phone subscription</h2>
-        <table class="tableClass" id = "tableSubs">
           In need for a cheap, accessible mobile subscription?
           <p id="indentSentence">Dont worry, we will deliever your new phone with the subscription of your choice already installed!</p>
           Buying a phone in our webshop allows us to offer you great deals for mobile subscription through our partners.
@@ -188,4 +189,24 @@
   </footer>
 
 </body>
+<!--Browser Compatability report:
+We developed and tested the website on two different browsers; Google Chrome and Safari.
+We both used different browsers, and experienced that there were some incompatibilities a few times.
+When that happened, we compared the results, and changed the code so it would be compatible with both browsers.
+After the website was developed, we tested it on Microsoft Edge which launched it without any problems.
+First we did page-break-before with h1, which gave us many pages with little content on each. It also showed that the table got divided in the middle, so we decided it would be more appropriate to break before each table to make sure the whole table was included in one page. We tested the print style by trying to print out the website which let us view the setup on paper (without actually printing it).
+Another thing we did was to test on different screen sizes, to make it look presentable and readable on other devices. Using the screen emulator made it possible to simulate and test with different devices. We focused on mobile web development. The biggest problem was the tables that we had, because on the mobile unit it was quite unreadable. The table was too big for the mobile screen, so the user had to scroll horizontally. Another big issue was that the text was too small, and did not fill the screen. Using a viewport made it easier to see the text on the screen with the mobile devices. We solved this by using responsive web design. We used a media query so that the design would change depending on your screen size (and device). We limited the max-width and chose a different design for smaller devices. The design is adapted to fit more devices, and the texts on the website should be readable no matter what.
+
+Validating the code:
+To ensure best practices for HTML we used a tool referred to in the Zybook to validate the HTML code: https://validator.w3.org . By doing so we ensured that no block elements were nested inside the tables like <p> and <div>. We ignored warnings concerning types on the input field. We interpreted the assignment where the inputs should be string, integer, and url. While the validator check suggested not using those values, and also for instance not using “placeholder” on integer. We think replacing integer with “number”, and string with “text” would have given less warnings concerning the inputs.
+To ensure best practise for CSS we used a similar tool for css code. https://jigsaw.w3.org/css-validator/
+
+Browser compatability
+We used the tool https://caniuse.com to check which browsers that supported the tags in our website. However, since we have too many tags for checking them all, we decided to do blind-tests where we checked 5 random tags that we thought might have limitations.
+font-style-image: all versions
+<nav>: Supported for all Edge versions, Chrome from version 5.0, Safari from version 5.0
+Media queries:  Edge 12-97, Chrome from version 41, Safari from version 9
+Widows: Edge 12-97, Chrome from version 25, Safari form version 7
+:focus = Edge 79-96, Chrome 60-100, Safari 10.1++
+-->
 </html>

@@ -16,7 +16,6 @@ body {
   only screen
   and (max-width: 768px)  {
 
-
   .tableClass table, thead, tbody, tr, th, td {
     display: block;
   }
@@ -66,7 +65,7 @@ h1.logo {
   margin-right: auto;
 }
 
-/* table */
+/* Same properties for all the tables */
 .tableClass {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -136,8 +135,6 @@ caption {
   text-transform: capitalize;
 }
 
-
-
 /*Submit button. Shorthand use of font variant, size, and family*/
 #submitBtn {
   font: small-caps 1rem sans-serif;
@@ -173,13 +170,18 @@ figure {
   margin-right: 50px;
 }
 
+/*Picture of the newest release with its caption*/
 #new {
   height: 250px;
   width: 250px;
   border: 1px solid rgb(56,56,56);
 }
+caption{
+  font-weight: bold;
+  font-size: 2rem;
+}
 
-/* navigation bar */
+/* Navigation bar in header*/
 .nav {
   background-color: #006699;
   height: 6%;
@@ -187,18 +189,15 @@ figure {
   overflow: hidden;
   white-space: nowrap;
 }
-
 .nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-
 .nav li {
   display: inline-block;
 }
-
 .nav li a {
   display: block;
   color: white;
@@ -206,22 +205,21 @@ figure {
   font-family: sans-serif;
   text-decoration: none;
 }
-
 .nav li a:hover {
   background-color: #3B99D2;
 }
 
-
-caption{
-  font-weight: bold;
-  font-size: 2rem;
+/*Making bullet points in Phone description*/
+dd{
+  display: list-item;
+  list-style: circle outside;
 }
 
+/*Bullet points and margin on the last list on the website showing all the phone brands*/
 .brands{
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
 .brands ul{
   list-style: none;
   list-style-image:linear-gradient(to right top, lightBlue, darkBlue);
@@ -229,75 +227,61 @@ caption{
   list-style-position: inside;
 }
 
-
-dd{
-  display: list-item;
-  list-style: circle outside;
-}
-
+/*Style for the email-link in footer*/
 #mail:link  {
   color: rgb(128, 193, 255);
   text-decoration: none;
 }
-
 #mail:hover{
   font-size:1rem;
 }
-
 #mail:active {
   color: green;
 }
-
 #mail:visited{
   color: yellow;
 }
 
-
+/*Style for link in the intro, above the first table*/
 #description{
   color: #3B99D2;
 }
-
 #description:link {
   color: green;
 }
-
 #description:hover{
     font-size: 1.2rem;
 }
-
 #description:active {
   color: red;
 }
-
 #description:visited{
   color: darkBlue;
 }
+
 
 #products {
   caption-side: top;
 }
 
-
+/*Info section with its image*/
 #info img {
   float: right;
   width: 400px;
   margin-left:10px;
 }
-
 #info{
   margin-left: 1em;
   margin-right: 1em;
-
 }
 
+/*Set the sizes of the phone images in the first table*/
 #iphone {
   width: 100px;
 }
-
 #samsung {
   width: 150px;
 }
-
 #huawei {
   width: 200px;
 }
@@ -310,6 +294,7 @@ footer {
   font-size: 15px;
 }
 
+/*Style for printable format*/
 @media print {
   table {page-break-before: always;}
   footer {page-break-after: always;}

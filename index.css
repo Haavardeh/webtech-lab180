@@ -50,6 +50,7 @@ body {
   .tableClass td:before { content: attr(title); }
 
 } /*end of media*/
+
 h1.logo {
   vertical-align: sub;
 }
@@ -58,6 +59,7 @@ h1.logo {
   width: 15px;
   height: 15px;
 }
+
 .intro {
   text-align: center;
   display: block;
@@ -93,7 +95,6 @@ h1.logo {
 
 .inputClass input:focus {
   background-color: rgb(245,245,245);
-
 }
 
 #tableSubs {
@@ -138,7 +139,7 @@ caption {
 
 
 
-/**Submit button. Shorthand use of font variant, size, and family*/
+/*Submit button. Shorthand use of font variant, size, and family*/
 #submitBtn {
   font: small-caps 1rem sans-serif;
   margin-top: 10px;
@@ -151,8 +152,6 @@ caption {
   border-radius: 15px;
   border-color: lightblue;
   padding: 15px 30px;
-
-
 }
 
 /*Selectrs for submit button*/
@@ -167,8 +166,6 @@ caption {
   list-style-position: inside;
 }
 
-
-
 figure {
   display: block;
   margin-top: 1em;
@@ -182,7 +179,6 @@ figure {
   width: 250px;
   border: 1px solid rgb(56,56,56);
 }
-
 
 /* navigation bar */
 .nav {
@@ -234,10 +230,14 @@ caption{
   list-style-position: inside;
 }
 
-
 .picture_phones{
   object-fit: cover;
   width: 200;
+}
+
+dd{
+  display: list-item;
+  list-style: circle outside;
 }
 
 #mail:link  {
@@ -282,6 +282,7 @@ caption{
   caption-side: top;
 }
 
+
 #info img {
   float: right;
   width: 400px;
@@ -292,11 +293,6 @@ caption{
   margin-left: 1em;
   margin-right: 1em;
 
-}
-
-dd{
-  display: list-item;
-  list-style: circle outside;
 }
 
 #iphone {

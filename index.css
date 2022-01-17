@@ -14,8 +14,7 @@ body {
 /*Responsive design*/
 @media
   only screen
-  and (max-width: 760px), (min-device-width: 768px)
-  and (max-device-width: 1024px)  {
+  and (max-width: 768px)  {
 
 
   .tableClass table, thead, tbody, tr, th, td {

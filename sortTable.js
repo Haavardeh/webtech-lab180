@@ -10,11 +10,27 @@ $('table').sortTable({
 })*/
 // = document.getElementById("products");
 
+function myCallback(){
+  console.log("You clicked the header");
+}
 
+//Function to make a header in the table clickable
+function headerClick(){
+  let table = $("#products");
+  $(table).find("th").click(myCallback);
+}
+
+
+//Waiting to jQuery to get ready before executing the code.
 $(function(){
   let $table = document.getElementById("products");
-  console.log($table);
+  console.log($($table));
+
+  headerClick();
+
 });
+
+
 
 
 

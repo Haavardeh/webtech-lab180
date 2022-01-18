@@ -6,6 +6,7 @@ console.log(b);
 
 /*
 $('table').sortTable({
+
 })*/
 // = document.getElementById("products");
 

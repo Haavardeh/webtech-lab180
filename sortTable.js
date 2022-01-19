@@ -10,10 +10,13 @@ $('table').sortTable({
 })*/
 
 
-//Log a header click
+//Log checking if correct index of "th" is clicked.
 function myCallback(){
   $(this).html($(this).index());
-  console.log("You clicked the header");
+  console.log("You clicked index " + $(this).index());
+  console.log($(this).rows);
+
+
 }
 
 //Function to make a header in the table clickable

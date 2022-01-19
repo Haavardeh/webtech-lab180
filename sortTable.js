@@ -4,6 +4,7 @@ function findIndex(tableId){
 });
 }
 
+
 function sortTable(n, tableId) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById(tableId);

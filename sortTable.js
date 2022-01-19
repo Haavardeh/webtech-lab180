@@ -1,57 +1,54 @@
-var a = "test connection";
-var b = "more lines";
-
-console.log(a);
-console.log(b);
-
-/*
-$('table').sortTable({
-
-})*/
-
-
-//Log checking if correct index of "th" is clicked.
-function myCallback(){
-  $(this).html($(this).index());
-  console.log("You clicked index " + $(this).index());
-  console.log($(this).rows);
-
-
+function findIndex(tableId){
+  $('#' + tableId).on('click', 'th', function() {
+  sortTable($(this).index(), tableId);
+});
 }
 
-//Function to make a header in the table clickable
-function headerClick(){
-  let table = $("#products");
-  $(table).find("th").click(myCallback);
+function sortTable(n, tableId) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(tableId);
+  switching = true;
+  dir = "asc";
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+
+      if (dir == "asc") { //ascending order
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") { //descending order
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
 }
 
 
 //Waiting for jQuery to get ready before executing the code.
 $(function(){
-  let $table = document.getElementById("products");
-  console.log($($table));
 
-  headerClick();
+  findIndex("products");
+  findIndex("tableSubs");
 
 });
-
-/*
-1. First, we should make code to read the list.
-2. Kanskje bruke noe fra 7.2.3 for å velge alle liste objekter og legge de i et array som kan itereres gjennom.
-Men vi fikk ikke lov til å bruke dette(?) Hvis vi får lov, kan vi overskrive eksisterende liste ved å bruke:
-variabel = document.querySelector("listeID") variabel.innerHTML = "Sett opp ny liste"
-3. Use chapter 8.5.1 from Zybook to change the list (sorting elements).
-*
-*
-*/
-
-
-
-
-/*
-function showRow(table){
-  for (i in table){
-    console.log(i);
-  }
-}
-*/

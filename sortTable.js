@@ -8,9 +8,11 @@ console.log(b);
 $('table').sortTable({
 
 })*/
-// = document.getElementById("products");
 
+
+//Log a header click
 function myCallback(){
+  $(this).html($(this).index());
   console.log("You clicked the header");
 }
 
@@ -21,7 +23,7 @@ function headerClick(){
 }
 
 
-//Waiting to jQuery to get ready before executing the code.
+//Waiting for jQuery to get ready before executing the code.
 $(function(){
   let $table = document.getElementById("products");
   console.log($($table));
@@ -30,7 +32,15 @@ $(function(){
 
 });
 
-
+/*
+1. First, we should make code to read the list.
+2. Kanskje bruke noe fra 7.2.3 for å velge alle liste objekter og legge de i et array som kan itereres gjennom.
+Men vi fikk ikke lov til å bruke dette(?) Hvis vi får lov, kan vi overskrive eksisterende liste ved å bruke:
+variabel = document.querySelector("listeID") variabel.innerHTML = "Sett opp ny liste"
+3. Use chapter 8.5.1 from Zybook to change the list (sorting elements).
+*
+*
+*/
 
 
 

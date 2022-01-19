@@ -1,9 +1,10 @@
 function findIndex(tableId){
   $('#' + tableId).on('click', 'th', function() {
-  sortTable($(this).index(), tableId);
+    sortTable($(this).index(), tableId);
 });
 }
 
+//code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sort_table_desc
 function sortTable(n, tableId) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById(tableId);

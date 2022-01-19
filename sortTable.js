@@ -1,44 +1,54 @@
-var a = "test connection";
-var b = "more lines";
-
-console.log(a);
-console.log(b);
-
-/*
-$('table').sortTable({
-
-})*/
-// = document.getElementById("products");
-
-function myCallback(){
-  console.log("You clicked the header");
-}
-
-//Function to make a header in the table clickable
-function headerClick(){
-  let table = $("#products");
-  $(table).find("th").click(myCallback);
-}
-
-
-//Waiting to jQuery to get ready before executing the code.
-$(function(){
-  let $table = document.getElementById("products");
-  console.log($($table));
-
-  headerClick();
-
+function findIndex(tableId){
+  $('#' + tableId).on('click', 'th', function() {
+  sortTable($(this).index(), tableId);
 });
+}
 
+function sortTable(n, tableId) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(tableId);
+  switching = true;
+  dir = "asc";
 
+  while (switching) {
+    switching = false;
+    rows = table.rows;
 
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
 
-
-
-/*
-function showRow(table){
-  for (i in table){
-    console.log(i);
+      if (dir == "asc") { //ascending order
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") { //descending order
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
   }
 }
-*/
+
+
+//Waiting for jQuery to get ready before executing the code.
+$(function(){
+
+  findIndex("products");
+  findIndex("tableSubs");
+
+});

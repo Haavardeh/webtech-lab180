@@ -15,8 +15,7 @@ $(document).ready(function () {
       dataType: "json",
       encode: true,
     }).done(function (data) {
-      $("#products tr:last").load("index.html");
-
+      $("#products").append(#formTable).last();
     });
 
 
@@ -29,6 +28,6 @@ $(document).ready(function () {
       }
     });*/
 
-    event.preventDefault();
+    //event.preventDefault();
   });
 });

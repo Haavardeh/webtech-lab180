@@ -15,7 +15,9 @@ function sortTable(n, tableId) {
     switching = false;
     rows = table.rows;
 
-    for (i = 1; i < (rows.length - 1); i++) { 
+
+
+    for (i = 1; i < (rows.length - 1); i++) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];

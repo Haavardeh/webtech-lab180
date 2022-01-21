@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $(".resetBtn").click(function() {
     $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",
@@ -8,7 +7,6 @@ $(document).ready(function () {
         alert(data_response.responseText);
       },
     });
-  });
 });
 
 

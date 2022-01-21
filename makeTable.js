@@ -5,11 +5,14 @@ $(document).ready(function () {
       dataType: "json",
       success: function(data) {
         $.each(data, function(i, value){
-          $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td ="phonePics"><img src=" ${data[i].image} "></td></tr>`);
+          $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src=" ${data[i].image} "></td></tr>`);
         });
       }
     });
 });
+
+$("#phonePics").css("width:100px;");
+
 
 /* $("#formContent").append('<tr><td>'+${data[i].id}+'</td><td>'+${data[i].brand}+'</td><td>'+${data[i].model}+'</td><td>'+${data[i].brand}+'</td> <td><img src="' ${data[i].image} '"></td></tr>');*/
 //<td>${data[i].id}</td>

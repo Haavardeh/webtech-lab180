@@ -14,6 +14,9 @@ $(document).ready(function () {
     });
 });
 
+/* $("#formContent").append('<tr><td>'+${data[i].id}+'</td><td>'+${data[i].brand}+'</td><td>'+${data[i].model}+'</td><td>'+${data[i].brand}+'</td> <td><img src="' ${data[i].image} '"></td></tr>');*/
+//<td>${data[i].id}</td>
+
 
 /*let rows = document.createElement('tr');
 document.getElementById('tbody').appendChild(rows);*/

@@ -5,7 +5,7 @@ $(document).ready(function () {
       dataType: "json",
       success: function(data) {
         $.each(data, function(i, value){
-          $("#formContent").append(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td><img src=" ${data[i].image} "></td></tr>`);
+          $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td ="phonePics"><img src=" ${data[i].image} "></td></tr>`);
         });
       }
     });

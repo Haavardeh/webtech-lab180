@@ -13,6 +13,6 @@ $(document).ready(function () {
 });
 
 /*
-Code found in first comment in this discussion thread from url:
+Code is found in first comment in this discussion thread from url:
 https://stackoverflow.com/questions/12322009/jquery-ajax-get-json/34142058
 */

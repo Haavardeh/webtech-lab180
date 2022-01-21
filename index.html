@@ -53,7 +53,7 @@
     <div class="firstTable"> <!--Section with tables, class used for setting a margin on the content except footer and header-->
 
       <!--First Table inside a form-->
-      <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post">
+      <form action="https://wt.ops.labs.vu.nl/api22/572a7d65" method="post" id="dataForm">
         <table id="products" class="tableClass" >
           <caption>Phone information</caption>
           <thead>
@@ -67,30 +67,6 @@
         </thead>
 
         <tbody>
-          <!--Row 1-->
-          <tr>
-            <td title="Brand">Apple</td>
-            <td title="Model">IPhone X</td>
-            <td title="OS">iOS</td>
-            <td title="Screesize">5</td>
-            <td title="Image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt ="Picture of iphone X" id="iphone"></td>
-          </tr>
-          <!--Row 2-->
-          <tr>
-            <td title="Brand">Samsung</td>
-            <td title="Model">Galaxy A22</td>
-            <td title="OS">Android</td>
-            <td title="Screesize">7</td>
-            <td title="Image"><img src="https://m.media-amazon.com/images/I/71iR5Vx6hTL._AC_SX679_.jpg" alt="Picture of Samsung A22" id="samsung"></td>
-          </tr>
-          <!--Row 3-->
-          <tr>
-            <td title="Brand">Huawei</td>
-            <td title="Model">Y6p</td>
-            <td title="OS">Emui</td>
-            <td title="Screesize">6</td>
-            <td title="Image"><img src ="https://www.powerplanetonline.com/cdnassets/huawei_y6p_3gb_64gb_07_negro_ad_l.jpg" alt="Picture of Huawei Y6p" id="huawei"></td>
-          </tr>
           <!--Row 4, input field with a form that sends the input to the server using a generated key-->
           <tr class="inputClass">
             <td title="Brand">
@@ -105,7 +81,7 @@
               <input name=image type="url" placeholder="Choose an Image" required></td>
           </tr>
         </table>
-            <!--Button for submitting input-->
+            <!--Button for submitting input + reset button-->
         <input type="submit" id="submitBtn" value = "Submit">
         <button class="resetBtn" type="button"> Reset </button>
       </form>

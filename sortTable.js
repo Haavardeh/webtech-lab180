@@ -15,6 +15,8 @@ function sortTable(n, tableId) {
     switching = false;
     rows = table.rows;
 
+
+
     for (i = 1; i < (rows.length - 1); i++) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
@@ -43,7 +45,7 @@ function sortTable(n, tableId) {
       }
     }
   }
-}
+} //function sortTable
 
 
 //Waiting for jQuery to get ready before executing the code.

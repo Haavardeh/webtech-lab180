@@ -15,8 +15,8 @@ $(document).ready(function () {
       dataType: "json",
       encode: true,
     }).done(function (data) {
-      $("#products tr:last").load("index.html");
-
+      $("#products").append(formData);
+      $("#products").load("index.html");
     });
 
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       success: function(data) {
-        console.log($("data:last-child"));
+        $("#products").load("index.html");
       }
     });*/
 

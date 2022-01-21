@@ -3,9 +3,10 @@ $(document).ready(function () {
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",
       dataType: "json",
-      complete: function (data_response) {
-        alert(data_response.responseText);
-      },
+      complete:
+        $.each(function(i, data){
+          $("table#products").append("<tr><td>" + data.id + "</td><td>" + data.brand + "</td><td>" + data.model + "</td><td>"+ data.os + "</td><td>" + data.image + "</td></tr>");
+        }),
     });
 });
 

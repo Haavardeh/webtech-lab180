@@ -4,9 +4,12 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       complete:
-        $.each(function(i, data){
-          $("table#products").append("<tr><td>" + data.id + "</td><td>" + data.brand + "</td><td>" + data.model + "</td><td>"+ data.os + "</td><td>" + data.image + "</td></tr>");
-        }),
+      function (data_response) {
+       alert(data_response.responseText);
+     },
+        /*$.each(obj, function(i, data){
+          $("#products").append("<tr><td>" + data.id + "</td><td>" + data.brand + "</td><td>" + data.model + "</td><td>"+ data.os + "</td><td>" + data.image + "</td></tr>");
+        }),*/
     });
 });
 

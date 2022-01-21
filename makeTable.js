@@ -6,10 +6,11 @@ $(document).ready(function () {
       /*success: function(data) {
         console.log(data[0].id);
       }*/
-      success:
-        $.each(function(i, data){
-          $("#formContent").append(`<tr><td>${data[i].id}</td> <td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td><img src=" ${data[i].image} "></td></tr>`);
-      })
+      success function:
+        $.each(function(data){
+          console.log(data);
+          $("#formContent").append('<tr><td> ${data}</td> <td>${data[0].brand}</td> <td>${data[0].model}</td> <td>${data[0].os}</td> <td><img src="${data[0].image}"></td></tr>');
+      }),
     });
 });
 

@@ -12,7 +12,7 @@ var updateTable = function(){
     dataType: "json",
     success: function(data) {
       $.each(data, function(i, value){
-        $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
+        $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
       });
     }
   });
@@ -133,22 +133,10 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       complete: function (data_response) {
-        $("td").remove();
+        $(".newTable").remove();
         updateTable();
       },
     });
-    //Use update table method
-    updateTable('https://wt.ops.labs.vu.nl/api22/572a7d65/')
-  //  updateTable();
-  /*  $.ajax({
-      url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
-      type: "GET",
-      dataType: "json",
-      success: function(data) {
-        i = data.length-1
-        $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
-      }
-    });*/
   });
 });
 

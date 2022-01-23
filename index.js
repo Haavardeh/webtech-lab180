@@ -9,7 +9,7 @@ function updateTable(){
     type: "GET",
     dataType: "json",
     success: function(data) {
-      $.each(data, function(i, value){
+      $.each(data, function(i){
         $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
       });
     }
@@ -102,7 +102,7 @@ $(document).ready(function () {
       dataType: "json",
       encode: true,
 
-    }).done(function (data) {
+    }).done(function() {
       $("#products").append(formData);
       document.getElementById("dataForm").reset();
 
@@ -112,7 +112,7 @@ $(document).ready(function () {
         type: "GET",
         dataType: "json",
         success: function(data) {
-          i = data.length-1
+          var i = data.length-1;
           $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
         }
       });
@@ -129,7 +129,7 @@ $(document).ready(function () {
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/reset',
       type: "GET",
       dataType: "json",
-      complete: function (data_response) {
+      complete: function() {
         $(".newTable").remove();
         updateTable();
       }

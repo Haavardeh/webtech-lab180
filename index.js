@@ -133,7 +133,7 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       complete: function (data_response) {
-        $("td").remove();
+        $(".newTable").remove();
         updateTable();
       },
     });

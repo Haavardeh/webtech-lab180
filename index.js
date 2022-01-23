@@ -1,8 +1,6 @@
-
-
-  $(document).ready(function () {
-    updateTable();
-  });
+$(document).ready(function () {
+  updateTable();
+});
 
 //Function for making and updating the table
 var updateTable = function(){
@@ -17,7 +15,6 @@ var updateTable = function(){
     }
   });
 } //Close function for updating table
-
 
 
 //Function that sends the th as a parameter into the function that sorts the table.
@@ -109,7 +106,7 @@ $(document).ready(function () {
       $("#products").append(formData);
       document.getElementById("dataForm").reset();
 
-//Use update table method
+    //Use update table method
     $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",
@@ -119,7 +116,7 @@ $(document).ready(function () {
         $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
       }
     });
-    });
+  }); //.done
     event.preventDefault();
   });
 });
@@ -139,8 +136,3 @@ $(document).ready(function () {
     });
   });
 });
-
-/*
-Code is found in first comment in this discussion thread from url:
-https://stackoverflow.com/questions/12322009/jquery-ajax-get-json/34142058
-*/

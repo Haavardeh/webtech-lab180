@@ -19,10 +19,6 @@ $(document).ready(function () {
       $("#products").append(formData);
 
 
-    /*$.get( "ajax/index.html", function( data ) {
-      $( "body" ).html( data );
-      alert( "Load was performed." );
-    });*/
     $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",
@@ -33,14 +29,7 @@ $(document).ready(function () {
       }
     });
     });
-  /*  $.ajax({
-      url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
-      type: "GET",
-      dataType: "json",
-      success: function(data) {
-        $("#products").load("index.html");
-      }
-    });*/
+
 
     event.preventDefault();
   });

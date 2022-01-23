@@ -17,15 +17,23 @@ $(document).ready(function () {
 
     }).done(function (data) {
       $("#products").append(formData);
-      $("#dataForm").load("index.html", function(){
-        alert("Function is complete");
-      }
-    );
-      //$("#form").load("index.html");
     });
 
+    /*$.get( "ajax/index.html", function( data ) {
+      $( "body" ).html( data );
+      alert( "Load was performed." );
+    });*/
+    $.ajax({
+      url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
+      type: "GET",
+      dataType: "json",
+      success: function(data) {
+        i = data.length-1
+        $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
+      }
+    });
 
-    /*$.ajax({
+  /*  $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",
       dataType: "json",
@@ -33,7 +41,6 @@ $(document).ready(function () {
         $("#products").load("index.html");
       }
     });*/
-
 
     event.preventDefault();
   });

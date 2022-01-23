@@ -16,6 +16,7 @@ $(document).ready(function () {
       encode: true,
     }).done(function (data) {
       $("#products").append(formData);
+      document.getElementById("dataForm").reset();
     });
 
     /*$.get( "ajax/index.html", function( data ) {

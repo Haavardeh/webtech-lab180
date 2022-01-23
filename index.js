@@ -107,6 +107,7 @@ $(document).ready(function () {
 
     }).done(function (data) {
       $("#products").append(formData);
+      document.getElementById("dataForm").reset();
 
 //Use update table method
     $.ajax({

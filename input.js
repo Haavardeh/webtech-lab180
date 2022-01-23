@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     }).done(function (data) {
       $("#products").append(formData);
-    });
+
 
     /*$.get( "ajax/index.html", function( data ) {
       $( "body" ).html( data );
@@ -32,7 +32,7 @@ $(document).ready(function () {
         $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
       }
     });
-
+    });
   /*  $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",

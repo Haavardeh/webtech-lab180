@@ -84,6 +84,7 @@ $(function(){
 
 
 //Function for updating table based in user-input to the form
+//inspired by https://www.digitalocean.com/community/tutorials/submitting-ajax-forms-with-jquery
 $(document).ready(function () {
   $("form").submit(function (event) {
     var formData = {

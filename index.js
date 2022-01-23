@@ -1,13 +1,13 @@
 
 
   $(document).ready(function () {
-    updateTable('https://wt.ops.labs.vu.nl/api22/572a7d65/');
+    updateTable();
   });
 
 //Function for making and updating the table
-var updateTable = function(urlAttr){
+var updateTable = function(){
   $.ajax({
-    url: urlAttr,
+    url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
     type: "GET",
     dataType: "json",
     success: function(data) {
@@ -116,7 +116,7 @@ $(document).ready(function () {
       dataType: "json",
       success: function(data) {
         i = data.length-1
-        $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
+        $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
       }
     });
     });

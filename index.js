@@ -138,6 +138,7 @@ $(document).ready(function () {
       },
     });
     //Use update table method
+    updateTable('https://wt.ops.labs.vu.nl/api22/572a7d65/')
   //  updateTable();
   /*  $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',

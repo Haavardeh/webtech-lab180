@@ -1,13 +1,13 @@
 
 
   $(document).ready(function () {
-    updateTable();
+    updateTable('https://wt.ops.labs.vu.nl/api22/572a7d65/');
   });
 
 //Function for making and updating the table
-var updateTable = function(){
+var updateTable = function(urlAttr){
   $.ajax({
-    url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
+    url: urlAttr,
     type: "GET",
     dataType: "json",
     success: function(data) {
@@ -137,6 +137,7 @@ $(document).ready(function () {
       }
     });
     //Use update table method
+    updateTable('https://wt.ops.labs.vu.nl/api22/572a7d65/')
   /*  $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",

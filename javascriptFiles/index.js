@@ -1,3 +1,4 @@
+//Waiting until all content in document is loaded before making sending a request for updating the table.
 $(document).ready(function () {
   updateTable();
 });
@@ -16,13 +17,13 @@ var updateTable = function(){
   });
 } //Close function for updating table
 
-
 //Function that sends the th as a parameter into the function that sorts the table.
 function findIndex(tableId){
   $('#' + tableId).on('click', 'th', function() {
     sortTable($(this).index(), tableId);
 });
 }
+
 /*
 Function that sorts the table.
 Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sort_table_desc, but modified
@@ -38,7 +39,7 @@ function sortTable(n, tableId) {
     switching = false;
     rows = table.rows;
 
-    //change rowlength depending on table, because we want to exclude sorting of the input fields
+    //Change rowlength depending on table, because we want to exclude sorting of the input fields
     if (tableId == "tableSubs") {
       rowlength = rows.length - 1;
     } else if (tableId == "products"){
@@ -84,7 +85,7 @@ $(function(){
 }); //Closing function for sorting the table
 
 
-//Function for updating table based in user-input to the form
+//Function for updating table based in user-input
 $(document).ready(function () {
   $("form").submit(function (event) {
     var formData = {
@@ -102,7 +103,7 @@ $(document).ready(function () {
       dataType: "json",
       encode: true,
 
-    }).done(function (data) {
+    }).done(function () {
       $("#products").append(formData);
       document.getElementById("dataForm").reset();
 

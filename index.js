@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 //Function for making and updating the table
-var updateTable = function(){
+function updateTable(){
   $.ajax({
     url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
     type: "GET",
@@ -84,6 +84,7 @@ $(function(){
 
 
 //Function for updating table based in user-input to the form
+//inspired by https://www.digitalocean.com/community/tutorials/submitting-ajax-forms-with-jquery
 $(document).ready(function () {
   $("form").submit(function (event) {
     var formData = {

@@ -14,9 +14,14 @@ $(document).ready(function () {
       data: formData,
       dataType: "json",
       encode: true,
+
     }).done(function (data) {
       $("#products").append(formData);
-      $("#products").load("index.html");
+      $("#dataForm").load("index.html", function(){
+        alert("Function is complete");
+      }
+    );
+      //$("#form").load("index.html");
     });
 
 
@@ -29,6 +34,7 @@ $(document).ready(function () {
       }
     });*/
 
-    //event.preventDefault();
+
+    event.preventDefault();
   });
 });

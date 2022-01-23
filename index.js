@@ -105,6 +105,7 @@ $(document).ready(function () {
 
     }).done(function (data) {
       $("#products").append(formData);
+      document.getElementById("dataForm").reset();
 
     $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',

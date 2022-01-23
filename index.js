@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 //Function for making and updating the table
-var updateTable = function(){
+function updateTable(){
   $.ajax({
     url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
     type: "GET",

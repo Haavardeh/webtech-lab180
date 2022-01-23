@@ -1,4 +1,6 @@
-$(document).ready(function () {
+
+
+  $(document).ready(function () {
     updateTable();
   });
 
@@ -106,6 +108,7 @@ $(document).ready(function () {
     }).done(function (data) {
       $("#products").append(formData);
 
+//Use update table method
     $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
       type: "GET",
@@ -130,8 +133,18 @@ $(document).ready(function () {
       dataType: "json",
       complete: function (data_response) {
         alert(data_response.responseText);
-      },
+      }
     });
+    //Use update table method
+  /*  $.ajax({
+      url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/',
+      type: "GET",
+      dataType: "json",
+      success: function(data) {
+        i = data.length-1
+        $(".inputClass").before(`<tr><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
+      }
+    });*/
   });
 });
 

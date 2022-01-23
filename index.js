@@ -130,7 +130,8 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       complete: function (data_response) {
-        alert(data_response.responseText);
+        $("td").remove();
+        updateTable();
       },
     });
   });

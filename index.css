@@ -82,13 +82,14 @@ h1.logo {
   background-color: white;
 }
 
-.tableClass th {
+.tableClass th, .titleBrand {
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #ddd;
   border:1px solid;
   border-color: rgb(56,56,56);
   color: black;
+  font-weight: bold;
 }
 
 .inputClass input:focus {
@@ -100,11 +101,6 @@ h1.logo {
   border-spacing: 5px;
   border-color: #3B99D2;
   background-color: inherit;
-}
-
-/*Making upper left block invisible while keeping its position*/
-#invisibleTable {
-  display: inherit;
 }
 
 
@@ -137,7 +133,7 @@ caption {
 
 /*Submit button and reset button. Shorthand use of font variant, size, and family*/
 .resetBtn, #submitBtn {
-  font: small-caps 1rem sans-serif;
+  font: 1rem sans-serif;
   margin-top: 10px;
   padding: black;
   width: 200px;

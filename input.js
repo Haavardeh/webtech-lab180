@@ -14,6 +14,7 @@ $(document).ready(function () {
       data: formData,
       dataType: "json",
       encode: true,
+
     }).done(function (data) {
       $("#products").append(formData);
       document.getElementById("dataForm").reset();

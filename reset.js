@@ -4,8 +4,10 @@ $(document).ready(function () {
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/reset',
       type: "GET",
       dataType: "json",
-      complete: function (data_response) {
+      complete: function (data) {
         alert(data_response.responseText);
+          }
+        });
       },
     });
   });

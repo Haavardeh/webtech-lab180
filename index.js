@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   updateTable();
 });
 
@@ -85,7 +85,7 @@ $(function(){
 
 //Function for updating table based in user-input to the form
 //inspired by https://www.digitalocean.com/community/tutorials/submitting-ajax-forms-with-jquery
-$(document).ready(function () {
+$(document).ready(function() {
   $("form").submit(function (event) {
     var formData = {
       brand: $("#brand").val(),
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
 
 //Resetting the server and updates the table dynamically.
-$(document).ready(function () {
+$(document).ready(function() {
   $(".resetBtn").click(function() {
     $.ajax({
       url: 'https://wt.ops.labs.vu.nl/api22/572a7d65/reset',

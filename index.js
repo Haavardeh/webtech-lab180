@@ -133,8 +133,9 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       complete: function (data_response) {
-        alert(data_response.responseText);
-      }
+        $("td").remove();
+        updateTable();
+      },
     });
     //Use update table method
     updateTable('https://wt.ops.labs.vu.nl/api22/572a7d65/')

@@ -1,0 +1,21 @@
+{
+  "name": "my-web-server",
+  "version": "1.0.0",
+  "description": "A simple web server",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "1.19.1",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "package-json": "^7.0.0",
+    "sqlite3": "^5.0.2",
+    "underscore": "^1.13.2",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

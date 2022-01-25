@@ -1,29 +1,3 @@
-// ###############################################################################
-// Web Technology at VU University Amsterdam
-// Assignment 3
-//
-// The assignment description is available on Canvas.
-// Please read it carefully before you proceed.
-//
-// This is a template for you to quickly get started with Assignment 3.
-// Read through the code and try to understand it.
-//
-// Have you read the zyBook chapter on Node.js?
-// Have you looked at the documentation of sqlite?
-// https://www.sqlitetutorial.net/sqlite-nodejs/
-//
-// Once you are familiar with Node.js and the assignment, start implementing
-// an API according to your design by adding routes.
-
-
-// ###############################################################################
-//
-// Database setup:
-// First: Our code will open a sqlite database file for you, and create one if it not exists already.
-// We are going to use the variable "db' to communicate to the database:
-// If you want to start with a clean sheet, delete the file 'phones.db'.
-// It will be automatically re-created and filled with one example item.
-
 const sqlite = require('sqlite3').verbose();
 let db = my_database('./phones.db');
 

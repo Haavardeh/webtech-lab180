@@ -1,12 +1,6 @@
 const sqlite = require('sqlite3').verbose();
 let db = my_database('./phones.db');
 
-// ###############################################################################
-// The database should be OK by now. Let's setup the Web server so we can start
-// defining routes.
-//
-// First, create an express application `app`:
-
 var express = require("express");
 var app = express();
 
@@ -15,24 +9,19 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 
-// ###############################################################################
-// Routes
-//
-// TODO: Add your routes here and remove the example routes once you know how
-//       everything works.
-// ###############################################################################
-
-// This example route responds to http://localhost:3000/hello with an example JSON object.
-// Please test if this works on your own device before you make any changes.
-
 app.get("/hello", function(req, res) {
     response_body = {'Hello': 'World'} ;
 
-    // This example returns valid JSON in the response, but does not yet set the
-    // associated HTTP response header.  This you should do yourself in your
-    // own routes!
     res.json(response_body) ;
 });
+
+//posting new phones
+app.get("", function(req, res)  {
+  db.all("SELECT id, brand, model, os, image, screensize FROM phones", function(...) {
+    
+  }
+});
+
 
 // This route responds to http://localhost:3000/db-example by selecting some data from the
 // database and return it as JSON object.

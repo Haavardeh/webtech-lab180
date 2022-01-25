@@ -4,7 +4,14 @@ CRUD (Create, Retrieve, Update and Delete):
 3. to change data of a specific item (Update), and
 4. to remove data of a specific item (Delete)
 
-post: create
-get-request: retrieve *
-post: Update (oppdatere tabell basert på brukerinput)
-delete: 
+In SQL:
+1. INSERT one or more rows
+2. SELECT all items that meet some criteria. for example: "SELECT * FROM table" or "SELECT WHERE"
+3. UPDATE the data in a row
+4. DELETE rows from a table
+
+Activities in our js file => SQL methods (Maybe change this to the SQL commands above):
+1. Create table with content => POST or maybe GET(?)
+2. Retrieve all the content from db => GET *
+3. Update table based on user input => POST item from user input
+4. Delete all content when hitting submit button => DELETE *

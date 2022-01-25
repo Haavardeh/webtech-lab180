@@ -16,11 +16,11 @@ app.get("/hello", function(req, res) {
 });
 
 //posting new phones
-app.get("", function(req, res)  {
+/*app.get("", function(req, res)  {
   db.all("SELECT id, brand, model, os, image, screensize FROM phones", function(...) {
-    
+
   }
-});
+});*/
 
 
 // This route responds to http://localhost:3000/db-example by selecting some data from the

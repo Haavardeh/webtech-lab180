@@ -65,18 +65,6 @@ app.get('/db-example', function(req, res) {
     	return res.json(rows)
     });
 
-
-
-
-
-    let noe = db.getBrand(1);
-    console.log(noe);
-
-
-
-
-
-
 });
 
 app.post('/post-example', function(req, res) {
@@ -123,18 +111,7 @@ function my_database(filename) {
 			}
 		});
 
-
 	});
-
-
-getBrand(id){
-  db.all("SELECT id, brand, model, os, image, screensize FROM phones WHERE id=" + id, function(){
-    console.log("Phones id is: ", id.brand);
-  })
-}
-
-
-
 
 	return db;
 }

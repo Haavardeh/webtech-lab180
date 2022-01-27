@@ -31,16 +31,27 @@ app.get('/db-example', function(req, res) {
     db.all(`SELECT * FROM phones WHERE brand=?`, ['Fairphone'], function(err, rows) {
 
     	// TODO: add code that checks for errors so you know what went wrong if anything went wrong
-      if (err) {
-      console.error(err.message);
-      }
-      console.log('Getting all phones from Fairphone.');
-  });
+
     	// TODO: set the appropriate HTTP response headers and HTTP response codes here.
+      console.log("Standard funksjon");
+
 
     	// # Return db response as JSON
     	return res.json(rows)
     });
+
+
+
+
+
+    let noe = db.getBrand(1);
+    console.log(noe);
+
+
+
+
+    
+
 });
 
 app.post('/post-example', function(req, res) {
@@ -86,6 +97,19 @@ function my_database(filename) {
 				console.log("Database already contains", result[0].count, " item(s) at startup.");
 			}
 		});
+
+
 	});
+
+
+getBrand(id){
+  db.all("SELECT id, brand, model, os, image, screensize FROM phones WHERE id=" + id, function(){
+    console.log("Phones id is: ", id.brand);
+  })
+}
+
+
+
+
 	return db;
 }

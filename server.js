@@ -15,34 +15,51 @@ app.get("/hello", function(req, res) {
     res.json(response_body) ;
 });
 
-//posting new phones
-/*app.get("", function(req, res)  {
-  db.all("SELECT id, brand, model, os, image, screensize FROM phones", function(...) {
-
-  }
-});*/
-
-//insert
-app.post('/iphone', function(req,res) {
-  db.run(`INSERT INTO phones (brand, model, os, image, screensize)
-          VALUES (?, ?, ?, ?, ?)`,
-          ["Apple", "Iphone X", "IOS", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "5"]);
-          console.log('Inserted iphone');
+//testing
+app.get('/try', function(req,res) {
+  db.all("SELECT brand FROM phones", function(err, rows) {
+    if (rows[0] == "Fairphone") {
+      console.log("Fairphone");
+    }
+    return res.json(rows)
+  });
 });
 
-//retrieve
+//insert, 201 created
+app.post('/iphone', function(req,res) {
+  db.all(`INSERT INTO phones (brand, model, os, image, screensize)
+          VALUES (?, ?, ?, ?, ?)`,
+          ["Apple", "Iphone X", "IOS", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "5"]);
+  console.log('Inserted Iphone X');
+  return res.json(res)
+});
+
+//retrieve, 200 ok
 app.get('/retrieve', function(req, res) {
     db.all(`SELECT * FROM phones WHERE screensize>=?`, ['5'], function(err, rows) {
       console.log(rows);
       if (err) {
       console.error(err.message);
       }
-
       console.log('Getting all phones with screensize 5 or bigger.');
-
     	return res.json(rows)
     });
 });
+
+//update, 204 no content
+/*app.put('/update', function(req, res)) {
+}*/
+
+//remove
+app.post('/remove', function(req, res) {
+  db.run("DELETE FROM phones WHERE brand=?", ['Apple'], function(err,rows) {
+    console.log("iphone removed");
+    return res.json(rows)
+  });
+});
+
+
+
 
 
 // This route responds to http://localhost:3000/db-example by selecting some data from the

@@ -31,6 +31,11 @@ app.get('/db-example', function(req, res) {
     db.all(`SELECT * FROM phones WHERE brand=?`, ['Fairphone'], function(err, rows) {
 
     	// TODO: add code that checks for errors so you know what went wrong if anything went wrong
+      if (err) {
+      console.error(err.message);
+      }
+      console.log('Getting all phones from Fairphone.');
+  });
     	// TODO: set the appropriate HTTP response headers and HTTP response codes here.
 
     	// # Return db response as JSON

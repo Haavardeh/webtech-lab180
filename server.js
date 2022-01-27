@@ -16,18 +16,26 @@ app.get("/hello", function(req, res) {
 });
 
 //posting new phones
-/*app.get("", function(req, res)  {
-  db.all("SELECT id, brand, model, os, image, screensize FROM phones", function(...) {
-
-  }
-});*/
+app.get("/try", function(req, res)  {
+  db.all("SELECT brand FROM phones", function(err, rows) {
+    if (rows[0] == "Fairphone"){
+      console.log("Fairphone");
+    }
+    return res.json(rows[0]);
+  });
+});
 
 //insert
 app.post('/iphone', function(req,res) {
-  db.run(`INSERT INTO phones (brand, model, os, image, screensize)
+  db.all(`INSERT INTO phones (brand, model, os, image, screensize)
           VALUES (?, ?, ?, ?, ?)`,
-          ["Apple", "Iphone X", "IOS", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "5"]);
-          console.log('Inserted iphone');
+          ['Apple',
+          'Iphone X',
+          'IOS',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png', '5']);
+        //  console.log("inserted: " + brand);
+
+        return res.json("Brand inserted");
 });
 
 //retrieve
@@ -43,6 +51,9 @@ app.get('/retrieve', function(req, res) {
     	return res.json(rows)
     });
 });
+
+//UPDATE
+
 
 
 // This route responds to http://localhost:3000/db-example by selecting some data from the

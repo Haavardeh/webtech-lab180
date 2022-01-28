@@ -44,10 +44,11 @@ app.post('/iphone', function(req,res) {
   ///iphone/:id
   //res.json(req.body.brand);
   //var id = req.params.id;
-  db.run(`INSERT INTO phones (brand, model, os, image, screensize)
-          VALUES (req.body.brand, , req.body.model, req.body.os, req.body.image, req.body.screensize)`);
-  console.log('Inserted Iphone X');*/
-  //res.sendStatus(201);
+  db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?),
+          [req.body.brand, req.body.model, req.body.os, req.body.image, req.body.screensize]`);
+  /*db.run(`INSERT INTO phones (brand, model, os, image, screensize)
+          VALUES (req.body.brand,req.body.model, req.body.os, req.body.image, req.body.screensize)//);*/
+  res.sendStatus(201);
 });
 
 //retrieve, 200 ok

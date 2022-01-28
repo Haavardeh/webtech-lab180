@@ -6,6 +6,7 @@ var app = express();
 
 // We need some middleware to parse JSON data in the body of our HTTP requests:
 var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 
@@ -16,47 +17,69 @@ app.get("/hello", function(req, res) {
 });
 
 //posting new phones
+/*
 app.get("/try", function(req, res)  {
-  db.all("SELECT brand FROM phones", function(err, rows) {
+  db.all(`SELECT brand FROM phones, function(err, rows) {
     if (rows[0] == "Fairphone"){
       console.log("Fairphone");
     }
     return res.json(rows[0]);
   });
+});*/
+
+//retrieve all phones
+app.get('', function(req, res) {
+    db.all(`SELECT brand, model, os, image, screensize FROM phones`, function(err, rows) {
+      if (err) {
+        res.status(404).send(err);
+    } else {
+        res.json(rows);
+      }
+    });
 });
+
 
 //insert, 201 created
 app.post('/iphone', function(req,res) {
-  db.all(`INSERT INTO phones (brand, model, os, image, screensize)
+  ///iphone/:id
+  //var id = req.params.id;
+  console.log(req);
+  /*db.all(`INSERT INTO phones (brand, model, os, image, screensize)
           VALUES (?, ?, ?, ?, ?)`,
           ["Apple", "Iphone X", "IOS", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "5"]);
-  console.log('Inserted Iphone X');
+  console.log('Inserted Iphone X');*/
+  //res.sendStatus(201);
   return res.json(res)
 });
 
 //retrieve, 200 ok
 app.get('/retrieve', function(req, res) {
     db.all(`SELECT * FROM phones WHERE screensize>=?`, ['5'], function(err, rows) {
-      console.log(rows);
       if (err) {
-      console.error(err.message);
+      res.status(404).send(err);
+    } else {
+        console.log('Getting all phones with screensize 5 or bigger.');
+        res.json(rows);
       }
-      console.log('Getting all phones with screensize 5 or bigger.');
-    	return res.json(rows)
     });
 });
 
-//update, 204 no content
-/*app.put('/update', function(req, res)) {
-}*/
-
 //remove
 app.post('/remove', function(req, res) {
-  db.run("DELETE FROM phones WHERE brand=?", ['Apple'], function(err,rows) {
+  db.run(`DELETE FROM phones WHERE brand=?`, ['Apple'], function(err,rows) {
     console.log("iphone removed");
-    return res.json(rows)
+    return res.status(201)
   });
 });
+
+
+//update, 204 no content
+/*app.put('/update', function(req, res)) {
+db.run(`UPDATE phones
+                   SET brand=?, model=?, os=?, image=?,
+                   screensize=? WHERE id=?`,
+                   [item['brand'], item['model'], item['os'], item['image'], item['screensize'], item['id']], function(...
+}*/
 
 
 

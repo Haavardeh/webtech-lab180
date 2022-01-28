@@ -44,16 +44,9 @@ app.post('/iphone', function(req,res) {
   ///iphone/:id
   //res.json(req.body.brand);
   //var id = req.params.id;
-<<<<<<< HEAD
   db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?),
           [req.body.brand, req.body.model, req.body.os, req.body.image, req.body.screensize]`);
-  /*db.run(`INSERT INTO phones (brand, model, os, image, screensize)
-          VALUES (req.body.brand,req.body.model, req.body.os, req.body.image, req.body.screensize)//);*/
-=======
-  db.run(`INSERT INTO phones (brand, model, os, image, screensize)
-          VALUES (req.body.brand, req.body.model, req.body.os, req.body.image, req.body.screensize)`);
   console.log('Inserted Iphone X');
->>>>>>> db81b071e3838166728f7d09d695c84a881c9ee8
   res.sendStatus(201);
 });
 

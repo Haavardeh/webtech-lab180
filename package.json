@@ -8,7 +8,7 @@
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "package-json": "^7.0.0",
-    "sqlite3": "^4.2.0",
+    "sqlite3": "^5.0.0",
     "underscore": "^1.13.2"
   },
   "scripts": {

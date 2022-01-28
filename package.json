@@ -8,9 +8,8 @@
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "package-json": "^7.0.0",
-    "sqlite3": "^5.0.2",
-    "underscore": "^1.13.2",
-    "nodemon": "^2.0.15"
+    "sqlite3": "^4.2.0",
+    "underscore": "^1.13.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

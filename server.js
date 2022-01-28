@@ -15,13 +15,13 @@ app.get("/hello", function(req, res) {
     res.json(response_body) ;
 });
 
-//testing
-app.get('/try', function(req,res) {
+//posting new phones
+app.get("/try", function(req, res)  {
   db.all("SELECT brand FROM phones", function(err, rows) {
-    if (rows[0] == "Fairphone") {
+    if (rows[0] == "Fairphone"){
       console.log("Fairphone");
     }
-    return res.json(rows)
+    return res.json(rows[0]);
   });
 });
 

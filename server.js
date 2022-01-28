@@ -42,14 +42,12 @@ app.get('', function(req, res) {
 //insert, 201 created
 app.post('/iphone', function(req,res) {
   ///iphone/:id
+  //res.json(req.body.brand);
   //var id = req.params.id;
-  console.log(req);
-  /*db.all(`INSERT INTO phones (brand, model, os, image, screensize)
-          VALUES (?, ?, ?, ?, ?)`,
-          ["Apple", "Iphone X", "IOS", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "5"]);
+  db.run(`INSERT INTO phones (brand, model, os, image, screensize)
+          VALUES (req.body.brand, , req.body.model, req.body.os, req.body.image, req.body.screensize)`);
   console.log('Inserted Iphone X');*/
   //res.sendStatus(201);
-  return res.json(res)
 });
 
 //retrieve, 200 ok

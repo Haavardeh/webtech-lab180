@@ -48,6 +48,10 @@ app.get('/retrieve', function(req, res) {
 
 //update, 204 no content
 /*app.put('/update', function(req, res)) {
+db.run(`UPDATE phones
+                   SET brand=?, model=?, os=?, image=?,
+                   screensize=? WHERE id=?`,
+                   [item['brand'], item['model'], item['os'], item['image'], item['screensize'], item['id']], function(...
 }*/
 
 //remove

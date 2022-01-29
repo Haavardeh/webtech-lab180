@@ -3,25 +3,86 @@ let db = my_database('./phones.db');
 
 var express = require("express");
 var app = express();
+var headers = ["brand", "model", "os", "image", "screensize"];
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-
-app.get("/hello", function(req, res) {
-    response_body = {'Hello': 'World'} ;
-
-    res.json(response_body) ;
+//retrieve all phones
+app.get('', function(req, res) {
+    db.all(`SELECT id, brand, model, os, image, screensize FROM phones`, function(err, rows) {
+      if (err) {
+        res.status(404).send(err);
+    } else {
+        res.status(200).json(rows);
+      }
+    });
 });
 
-var headers = ["brand", "model", "os", "image", "screensize"];
+
+app.post('/insert', function(req,res) {
+  if (ifMissing(req, res) == false) {
+    return;
+  }
+  db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?),
+          [${req.body.brand}, ${req.body.model}, ${req.body.os}, ${req.body.image}, ${req.body.screensize}]`, function(err) {
+            if (err) {
+             res.status(404).send(err);
+            }
+            console.log("Item added");
+            return res.status(201).json(req.body);
+          });
+});
 
 
+//retrieve specific phone
+app.get('/retrieve/:id', function(req, res) {
+  var id = req.params.id;
+    db.all(`SELECT * FROM phones WHERE id=` + id, function(err, rows) {
+      if (err) {
+        res.status(404).send(err);
+    } else {
+        res.status(200).json(rows);
+      }
+    });
+});
+
+//remove
+app.post('/delete/:id', function(req, res) {
+  var id = req.params.id;
+
+  if(noId(id) == false) {
+    res.json("No item with this Id");
+  }
+
+  db.run(`DELETE FROM phones WHERE id=` + id, function(err,rows) {
+    if (err) {
+      res.status(404).send(err);
+    }
+    return res.status(204).json("Item with id " + id +" deleted");
+  });
+
+})
+
+
+//update
+app.put('/update/:id', function(req, res) {
+  var id = req.params.id;
+  db.run(`UPDATE phones SET brand=?, model=?, os=?, image=?, screensize=? WHERE id=?,
+          [${req.body.brand}, ${req.body.model}, ${req.body.os}, ${req.body.image}, ${req.body.screensize}]` + id, function(err, rows) {
+          if (err) {
+            res.status(404).send(err);
+          }
+          return res.status(204).json(rows);
+          });
+});
+
+//functions for errors that can occur
 function ifMissing(req, res) {
   for (let i of headers) {
     if(!req.body[i]) {
-      res.json('Object ' + i + ' is missing');
+      res.json(i + ' is missing');
       return false;
     }
   }
@@ -35,82 +96,19 @@ function ifEmpty(req, res) {
   }
 }
 
-//retrieve all phones
-app.get('', function(req, res) {
-    db.all(`SELECT id, brand, model, os, image, screensize FROM phones`, function(err, rows) {
-      if (err) {
-        res.status(404).send(err);
-    } else {
-        res.json(rows);
-      }
-    });
-});
-
-
-app.post('/insert', function(req,res) {
-  ifMissing(req, res);
-  if (ifMissing(req, res) == false) {
-    return;
-  }
-  db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?),
-          [${req.body.brand}, ${req.body.model}, ${req.body.os}, ${req.body.image}, ${req.body.screensize}]`, function(err) {
-            if (err) {
-             return console.error(err.message);
-            }
-            console.log("Item added");
-            return res.status(201).json(req.body);
-          });
-});
-
-
-//retrieve, 200 ok
-app.get('/retrieve/:id', function(req, res) {
-  var id = req.params.id;
-    db.all(`SELECT * FROM phones WHERE id=` + id, function(err, rows) {
-      if (err) {
-      res.status(404).send(err);
-    } else {
-        res.status(200).json(rows);
-      }
-    });
-});
-
-//remove
-app.post('/remove/:id', function(req, res) {
-  var id = req.params.id;
-  db.run(`DELETE FROM phones WHERE id=` + id, function(err,rows) {
-    res.json("Item with id " + id +" deleted");
-
-    if (err) {
-     return console.error(err.message);
-   }
+//doesnt work either, but want to check if its a valid ID
+function noId(id) {
+  app.get('', function(req, res) {
+      db.all(`SELECT id FROM phones`, function(err, rows) {
+        if (err) {
+          res.status(404).send(err);
+        }
+        if (id !== res.body.id) {
+          return false;
+        }
+      });
   });
-
-})
-
-
-//update, 204 no content
-app.put('/update/:id', function(req, res) {
-  var id = req.params.id;
-  db.run(`UPDATE phones
-          SET brand=?, model=?, os=?, image=?,
-          screensize=? WHERE id=?,
-          [${req.body.brand}, ${req.body.model}, ${req.body.os}, ${req.body.image}, ${req.body.screensize}, id]`, function(err, rows) {
-            res.json(rows);
-            console.log(rows);
-
-            if (err) {
-              return console.error(err.message);
-           }
-          });
-});
-
-app.post('/test', function(req, res) {
-  db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)`,
-  ["Apple", "Iphone 5", "iOS", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg", "6"], function(err, rows){
-    return res.json(rows);
-  });
-})
+}
 
 
 
@@ -123,7 +121,7 @@ app.get('/db-example', function(req, res) {
 
     	// TODO: add code that checks for errors so you know what went wrong if anything went wrong
       if (err) {
-      console.error(err.message);
+        console.error(err.message);
       }
       console.log('Getting all phones from Fairphone.');
     	// TODO: set the appropriate HTTP response headers and HTTP response codes here.
@@ -140,23 +138,19 @@ app.post('/post-example', function(req, res) {
 });
 
 
-// ###############################################################################
-// This should start the server, after the routes have been defined, at port 3000:
+
 
 app.listen(3000);
-console.log("Your Web server should be up and running, waiting for requests to come in. Try http://localhost:3000/hello");
 
-// ###############################################################################
-// Some helper functions called above
+
 function my_database(filename) {
-	// Conncect to db by opening filename, create filename if it does not exist:
 	var db = new sqlite.Database(filename, (err) => {
   		if (err) {
 			console.error(err.message);
   		}
   		console.log('Connected to the phones database.');
 	});
-	// Create our phones table if it does not exist already:
+
 	db.serialize(() => {
 		db.run(`
         	CREATE TABLE IF NOT EXISTS phones

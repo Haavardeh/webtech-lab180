@@ -15,7 +15,43 @@ Activities in our js file => SQL methods (Maybe change this to the SQL commands 
 2. Retrieve all the content from db => GET *
 3. Update table based on user input => POST item from user input
 4. Delete all content when hitting submit button => DELETE *
+********************************************
+
+API Assignment 3
+In this API we offer functionality according to CRUD. The API offers methods to create, retrieve, update, and delete resources.
+
+This API allows you to:
+- Create a table with one item that can be updated later with more items. (Not sure if you can update table yet)
+- Retrieve a specific item. And retreive all items.
+- Update parameter of 
+- Delete one specific item chosen by its id.
+
+Delete specific item
+Description: Removes a specific item with a given ID.
+Endpoint: /remove/:id
+HTTP Methods: POST
+ 
+Delete all items (Not sure if we should have this)
+Description: Removes all items from database
+Endpoint: /remove
+HTTP Methods: POST
+ 
+Select a specific item 
+Description: 
+Endpoint:
+HTTP Methods: 
+ 
+Retrieve resource from specific ID
+Description: Pass the item's ID as an argument to recieve all content from that item.
+Endpoint: /retrieve/: id
+HTTP Methods: GET
+ 
+Retrieve all resources
+Description: Give you all information about all the items.
+Endpoint: /
+HTTP Methods: GET
 
 
+To really fulfill the CRUD concept we should have allowed two more methods: one for creating new items for the table, 
+and one for updating existing data in the table. Which we did, but the code didnt work as expected. Therefor we list them below the working methods.
 
-Starting with passing a GET request to reach the content of the table.

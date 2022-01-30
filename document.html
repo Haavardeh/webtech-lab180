@@ -10,11 +10,7 @@ In SQL:
 3. UPDATE the data in a row
 4. DELETE rows from a table
 
-Activities in our js file => SQL methods (Maybe change this to the SQL commands above):
-1. Create table with content => POST or maybe GET(?)
-2. Retrieve all the content from db => GET *
-3. Update table based on user input => POST item from user input
-4. Delete all content when hitting submit button => DELETE *
+
 ********************************************
 
 API Assignment 3
@@ -41,17 +37,26 @@ Description:
 Endpoint:
 HTTP Methods: 
  
-Retrieve resource from specific ID
+Retrieve item from specific ID
 Description: Pass the item's ID as an argument to recieve all content from that item.
 Endpoint: /retrieve/: id
 HTTP Methods: GET
  
-Retrieve all resources
+Retrieve all items
 Description: Give you all information about all the items.
 Endpoint: /
 HTTP Methods: GET
 
 
-To really fulfill the CRUD concept we should have allowed two more methods: one for creating new items for the table, 
+To fulfill the CRUD concept we should have allowed two more methods: one for creating new items for the table, 
 and one for updating existing data in the table. Which we did, but the code didnt work as expected. Therefor we list them below the working methods.
 
+Update content of existing item
+Description: You sould pass the item´s id and the values you want to change to.
+Endpoint: /insert/:id, value1, value2, value3, value4, vlaue5
+HTTP Methods: POST
+
+Create new item with content
+Description: You should pass all the items values including id to create a new item with content.
+Endpoint:
+HTTP Methods:

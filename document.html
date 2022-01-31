@@ -1,7 +1,5 @@
-
-********************************************
-
 API Assignment 3
+*******************
 In this API we offer functionality according to CRUD. The API offers methods to create, retrieve, update, and delete resources.
 
 This API allows you to:
@@ -9,6 +7,7 @@ This API allows you to:
 - Retrieve a specific item. And retreive all items.
 - Update values of an item. (Not working)
 - Delete one item with a specific id
+************************************
 
 1 ***
 Delete specific item
@@ -81,20 +80,35 @@ Example of response:
 To fulfill the CRUD concept we should have allowed two more types of functionality: one for creating new items, 
 and one for updating existing values of an item. Which we did, but the code didnt work as expected. Therefore, have we listed them below.
 
-1 ***
+1***
 Update content of existing item
-Description: You sould pass the item´s id and the values you want to change to.
+Description: You should pass the item's id and the values you want to change to.
 MIME format: application/json
-Endpoint: /insert/:id, value1, value2, value3, value4, vlaue5
+Endpoint: http://localhost::3000/update/:id
 HTTP Methods: Put
+Response codes: 404- not found, 204- No content
 
+Example of request:
+app.put( http://localhost::3000/update/:1)
+
+Example of response:
+Dont know
 ***
-
+ 
 2***
-Create new item with value
+Create new item with values
 Description: You should pass all the items values including id to create a new item with content.
 MIME format: application/json
-Endpoint:
+Endpoint: http://localhost:3000/insert
 HTTP Methods: POST
+Response codes: 404 - not found, 201- item created
 
+Example of request:
+app.post(http://localhost:3000/insert)
+
+Example of response:
+response code 201. But we don't know the content
+
+***
+End of API
 ***

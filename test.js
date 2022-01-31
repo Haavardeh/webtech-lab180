@@ -20,7 +20,7 @@ app.get('', function(req, res) {
     });
 });
 
-//insert
+//create item
 app.post('/insert', function(req,res) {
   if (ifMissing(req, res) == false) {
     return;

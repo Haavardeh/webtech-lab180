@@ -5,17 +5,17 @@ API Assignment 3
 In this API we offer functionality according to CRUD. The API offers methods to create, retrieve, update, and delete resources.
 
 This API allows you to:
-- Create a table with one item that can be updated later with more items. (Not sure if you can update table yet)
+- Create a new item. (Not working)
 - Retrieve a specific item. And retreive all items.
-- Update parameter of 
-- Delete one specific item chosen by its id.
+- Update values of an item. (Not working)
+- Delete one item with a specific id
 
 1 ***
 Delete specific item
 Description: Removes a specific item with a given ID.
 MIME format: application/json
 Endpoint: http://localhost:3000/delete/:id
-HTTP Methods: POST
+HTTP Method: POST
 Response codes: 404- not found, 204- no content
 
 Example of request:
@@ -31,7 +31,7 @@ Retrieve items from specific ID
 Description: Pass the item's ID as an argument to receive all content from that item.
 MIME format: application/json
 Endpoint: http://localhost:3000/retrieve/:id 
-HTTP Methods: GET
+HTTP Method: GET
 Response codes: 404- not found, 200- OK
 
 Example of a request for an item with id 1.
@@ -53,7 +53,7 @@ Retrieve all items
 Description: Gives you a list of all items in the database
 MIME format: application/json
 Endpoint: http://localhost:3000/
-HTTP Methods: GET
+HTTP Method: GET
 Response codes: 404- not found, 200- OK
 
 Example of request:
@@ -79,14 +79,22 @@ Example of response:
 
 
 To fulfill the CRUD concept we should have allowed two more types of functionality: one for creating new items, 
-and one for updating existing values of an item. Which we did, but the code didnt work as expected. Therefor we list them below the working methods.
+and one for updating existing values of an item. Which we did, but the code didnt work as expected. Therefore, have we listed them below.
 
+1 ***
 Update content of existing item
 Description: You sould pass the item´s id and the values you want to change to.
+MIME format: application/json
 Endpoint: /insert/:id, value1, value2, value3, value4, vlaue5
+HTTP Methods: Put
+
+***
+
+2***
+Create new item with value
+Description: You should pass all the items values including id to create a new item with content.
+MIME format: application/json
+Endpoint:
 HTTP Methods: POST
 
-Create new item with content
-Description: You should pass all the items values including id to create a new item with content.
-Endpoint:
-HTTP Methods:
+***

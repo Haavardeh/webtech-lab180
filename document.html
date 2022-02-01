@@ -24,6 +24,7 @@ Example of response:
 {
 }
 ***
+<<<<<<< HEAD
 
 2 ***
 Retrieve items from specific ID
@@ -33,6 +34,17 @@ Endpoint: http://localhost:3000/retrieve/:id
 HTTP Method: GET
 Response codes: 404- not found, 200- OK
 
+=======
+ 
+2 ***
+Retrieve items from specific ID
+Description: Pass the item's ID as an argument to receive all content from that item.
+MIME format: application/json
+Endpoint: http://localhost:3000/retrieve/:id 
+HTTP Method: GET
+Response codes: 404- not found, 200- OK
+
+>>>>>>> a8c956a5e910d56dcf6a53c7cabc1ae5f657dffc
 Example of a request for an item with id 1.
 app.get(http://localhost:3000/1)
 
@@ -77,7 +89,11 @@ Example of response:
 ***
 
 
+<<<<<<< HEAD
 To fulfill the CRUD concept we should have allowed two more types of functionality: one for creating new items,
+=======
+To fulfill the CRUD concept we should have allowed two more types of functionality: one for creating new items, 
+>>>>>>> a8c956a5e910d56dcf6a53c7cabc1ae5f657dffc
 and one for updating existing values of an item. Which we did, but the code didnt work as expected. Therefore, have we listed them below.
 
 1***
@@ -94,7 +110,11 @@ app.put( http://localhost::3000/update/:1)
 Example of response:
 Dont know
 ***
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> a8c956a5e910d56dcf6a53c7cabc1ae5f657dffc
 2***
 Create new item with values
 Description: You should pass all the items values including id to create a new item with content.

@@ -45,6 +45,10 @@ body {
   	text-align:left;
   }
 
+  #submitBtn, .resetBtn {
+    margin: 20px;
+  }
+
   .tableClass td:before { content: attr(title); }
 
 } /*end of media*/
@@ -108,6 +112,7 @@ h1.logo {
   font-size: 20px;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-top: 3rem;
 }
 
 #indentSentence {
@@ -135,7 +140,6 @@ caption {
 .resetBtn, #submitBtn {
   font: 1rem sans-serif;
   margin-top: 10px;
-  padding: black;
   width: 200px;
   height: 50px;
   border: solid;
@@ -178,7 +182,7 @@ figure {
   width: 250px;
   border: 1px solid rgb(56,56,56);
 }
-caption{
+caption {
   font-weight: bold;
   font-size: 2rem;
 }
@@ -212,17 +216,17 @@ caption{
 }
 
 /*Making bullet points in Phone description*/
-dd{
+dd {
   display: list-item;
   list-style: circle outside;
 }
 
 /*Bullet points and margin on the last list on the website showing all the phone brands*/
-.brands{
+.brands {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.brands ul{
+.brands ul {
   list-style: none;
   list-style-image:linear-gradient(to right top, lightBlue, darkBlue);
   list-style-type: square;
@@ -230,17 +234,17 @@ dd{
 }
 
 /*Style for the email-link in footer*/
-#mail:link  {
+#mail:link {
   color: rgb(128, 193, 255);
   text-decoration: none;
 }
-#mail:hover{
+#mail:hover {
   font-size:1rem;
 }
 #mail:active {
   color: green;
 }
-#mail:visited{
+#mail:visited {
   color: yellow;
 }
 
@@ -251,13 +255,13 @@ dd{
 #description:link {
   color: green;
 }
-#description:hover{
+#description:hover {
     font-size: 1.2rem;
 }
 #description:active {
   color: red;
 }
-#description:visited{
+#description:visited {
   color: darkBlue;
 }
 
@@ -298,9 +302,10 @@ footer {
 
 /*Style for printable format*/
 @media print {
-  table {page-break-before: always;}
+  table, #info {page-break-before: always;}
   footer {page-break-after: always;}
-  #info {page-break-before: always;}
   #indentSentence p {orphans: 3;}
   #info dd {widows: 3;}
+  #formContent, .nav, #submitBtn, .resetBtn {display: none;}
+
 }

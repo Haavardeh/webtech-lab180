@@ -34,12 +34,9 @@ section {
   margin: auto;
 }
 
-p, li {
+p, .list {
   font-size: 18px;
   letter-spacing: 1.5px;
-}
-
-li {
 }
 
 h1, h2, h3, p, li {

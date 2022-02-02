@@ -1,27 +1,31 @@
 body {
   width: 100%;
-  margin: 0px;
-  background-color: blue;
+  margin:50px 0;
+  padding:0;
+  text-align:center;
+  margin: auto;
+
 }
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
 }
 
 td, th {
-  border: 1px solid #ddd;
-  padding: 10px;
-  background-color: orange;
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
 }
 
-tr {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: #ddd;
-  border:1px solid;
-  border-color: rgb(56,56,56);
-  color: black;
+th {
+  background-color: #dddddd;
+}
+
+caption {
   font-weight: bold;
+  font-size: 2rem;
 }

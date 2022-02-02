@@ -26,14 +26,24 @@ Appendix A & B (as tables) with more detailed information as described above-->
 <p> The colors of our webpage consists of grey, white, and black tones. These might be conflicting with WCAG 1.4.1 (Use of colors) and 1.4.3 (Contrast). We did use a contrast ratio.
     The background image had two different colors, but the most dominant one was a lighter gray (#E8E8E9). We got a score of 17.15 on the contrast ratio when we compared the background color with black.
     It is said that 17.15 “Passes AAA level for any size text and AA for user interface components and graphical objects” <a href="https://contrast-ratio.com/#black-on-%23E8E8E9" target="_blank"> (source)</a>.
-    Furthermore, the link in the footer is colored blue, while the background of the footer is colored as a darker blue which might cause concerns due to the 1.4.3 contrast principle. Since most of the text is smaller than 18px no-bold, there has to be a contrast ratio of 4:5:1. If the contrast is lower than the recommendations from WCAG 2.0, users with lower color perception might struggle to read the content. We used the contrast ratio, and as we thought it got a low score of 3.27, which is not quite appropriate.
+    Furthermore, the link in the footer is colored blue, while the background of the footer is colored as a darker blue which might cause concerns due to the 1.4.3 contrast principle. Since most of the text is smaller than 18px no-bold, there has to be a contrast ratio of 4:5:1. If the contrast is lower than the recommendations from WCAG 2.0, users with lower color perception might struggle to read the content. We used the contrast ratio, and as we thought it got a low score of 3.27, which is not quite appropriate. <br><br>
 
-<Put results from background ratio here>
+    There were several principles focusing on audio content, and images of text which both are irrelevant for our webpage since it does not contain such type of content. <br><br>
 
-There were several principles focusing on audio content, and images of text which both are irrelevant for our webpage since it does not contain such type of content.
+    Another concern we had was with WCAG 1.4.4. Resize text, as we were not sure if the text on the website would be properly adjusted if we resized the website up to 200 percent.
+    We did try it out and when we zoomed in, it did not lose any content or functionality.
+    The design shifted to the design we had for smaller screens, and it was possible to perceive all the information that we had on the website without any problems.
 </p>
 
 <h3> Improvement plan </h3>
+<p> There were quite a few things that we could improve, but we did have to prioritize which improvement actions we wanted to work on. </p>
+<ul class="list">
+  <li>Improve the print style (and exclude unnecessary items)</li>
+  <li>Fix the nav links so it serves some functionality.</li>
+  <li>Fix contrast on mail link and the footer. High priority, because it is important that users are able to perceive the information on the website. WCAG 1.4.3</li>
+  <li>Add alt to all images on the website. WCAG …</li>
+  <li>Run the validators for both HTML and CSS without any errors</li>
+</ul>
 </section>
 
 <div class="table">
@@ -238,7 +248,7 @@ There were several principles focusing on audio content, and images of text whic
       <tr>
         <td>Interactive form</td>
         <td>The types are completely wrong, type for brand, os and the model should have been text instead of a string. The type for screen size should have been a number instead of an integer.</td>
-        <td>Negative impact on usability. The data cannot be read properly, since the types are invalid. </td>
+        <td>Negative impact on usability. The data cannot be read properly, since the types are invalid. (we did fix it for assignment 2)</td>
       </tr>
       <tr>
         <td>Validator check</td>

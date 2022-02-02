@@ -36,4 +36,9 @@ section {
 
 p {
   font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+h1, h2, h3, p {
+  font-family: arial, sans-serif;
 }

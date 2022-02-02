@@ -9,7 +9,7 @@ body {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding: 10px;
 }
@@ -29,7 +29,7 @@ footer {
 }
 
 section {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 

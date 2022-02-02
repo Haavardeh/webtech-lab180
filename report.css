@@ -25,7 +25,6 @@ th {
   background-color: #dddddd;
 }
 
-caption {
-  font-weight: bold;
-  font-size: 2rem;
+footer {
+  height: 100px;
 }

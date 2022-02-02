@@ -10,7 +10,7 @@ function updateTable(){
     dataType: "json",
     success: function(data) {
       $.each(data, function(i){
-        $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px;></td> <td>${data[i].screensize}</td> </tr>`);
+        $(".inputClass").before(`<tr class="newTable"><td>${data[i].brand}</td> <td>${data[i].model}</td> <td>${data[i].os}</td> <td id="phonePics"><img src="${data[i].image}" width=150px alt="${data[i].model}";></td> <td>${data[i].screensize}</td> </tr>`);
       });
     }
   });

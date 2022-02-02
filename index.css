@@ -235,17 +235,17 @@ dd {
 
 /*Style for the email-link in footer*/
 #mail:link {
-  color: rgb(128, 193, 255);
+  color: midnightBlue;
   text-decoration: none;
 }
 #mail:hover {
   font-size:1rem;
 }
 #mail:active {
-  color: green;
+  color: rebeccaPurple;
 }
 #mail:visited {
-  color: yellow;
+  color: Indigo;
 }
 
 /*Style for link in the intro, above the first table*/
@@ -295,8 +295,8 @@ dd {
 footer {
   text-align: center;
   padding: 1px;
-  background-color: #006699;
-  color: white;
+  background-color: lightBlue;
+  color: black;
   font-size: 15px;
 }
 

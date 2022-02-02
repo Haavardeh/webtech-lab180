@@ -4,7 +4,6 @@ body {
   padding:0;
   text-align:center;
   margin: auto;
-
 }
 
 table {
@@ -35,7 +34,7 @@ section {
 }
 
 p, .list {
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 1.5px;
 }
 

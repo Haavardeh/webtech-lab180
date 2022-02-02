@@ -28,3 +28,12 @@ th {
 footer {
   height: 100px;
 }
+
+section {
+  width: 80%;
+  margin: auto;
+}
+
+p {
+  font-size: 18px;
+}

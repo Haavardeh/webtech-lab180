@@ -32,7 +32,7 @@
   <p> The colors of our webpage consists of grey, white, and black tones. These might be conflicting with WCAG 1.4.1 (Use of colors) and 1.4.3 (Contrast). We did use a contrast ratio.
       The background image had two different colors, but the most dominant one was a lighter gray (#E8E8E9). We got a score of 17.15 on the contrast ratio when we compared the background color with black.
       It is said that 17.15 “Passes AAA level for any size text and AA for user interface components and graphical objects” <a href="https://contrast-ratio.com/#black-on-%23E8E8E9" target="_blank"> (source)</a>.
-      Furthermore, the link in the footer is colored blue, while the background of the footer is colored as a darker blue which might cause concerns due to the 1.4.3 contrast principle. Since most of the text is smaller than 18px no-bold, there has to be a contrast ratio of 4:5:1. If the contrast is lower than the recommendations from WCAG 2.0, users with lower color perception might struggle to read the content. We used the contrast ratio, and as we thought it got a low score of 3.27, which is not quite appropriate. <br><br>
+      Furthermore, the link in the footer is colored blue, while the background of the footer is colored as a darker blue which might cause concerns due to the 1.4.3 contrast principle. Since most of the text is smaller than 18px no-bold, there has to be a contrast ratio of 4.5:1. If the contrast is lower than the recommendations from WCAG 2.0, users with lower color perception might struggle to read the content. We used the contrast ratio, and as we thought it got a low score of 3.27, which is not quite appropriate. <br><br>
 
       There were several principles focusing on audio content, and images of text which both are irrelevant for our webpage since it does not contain such type of content. <br><br>
 
@@ -111,7 +111,7 @@
             </td>
           </tr>
           <tr>
-            <td>1.3.2 Ordering the content in a Meaningful Sequence</td>
+            <td>1.3.2: Ordering the content in a Meaningful Sequence</td>
             <td>A</td>
             <td>Multicolumn webpages must be read vertical column by column where each element has a logical location</td>
             <td>
@@ -131,74 +131,117 @@
             </td>
           </tr>
           <tr>
-            <td>1.3.3 Sensory Characteristics</td>
+            <td>1.3.3: Sensory Characteristics</td>
             <td>A</td>
-            <td>Interactive and non- decorative content shouldn't depend on shape and color</td>
-            <td></td>
-            <td></td>
+            <td>Interactive and non- decorative content shouldn't depend only on shape and color. Also, prevent use of prepositions to present navigaion on the webbpage</td>
+            <td>
+              <ol>
+                <li>Buttons</li>
+                <li>Navigation bar</li>
+                <li>In section above the second table (id = secTableDescrip) we have used prepositions to describe the table below. </li>
+              </ol>
+            </td>
+            <td>
+              <ol>
+                <li>Not a problem because the buttons have value that is readable by assisitive techology (AT)</li>
+                <li>Navigation bar is listed in a navigation element which is recognized by AT. So no concerns here.</li>
+                <li>"Below" should be changed to "next section" because it is the nest section according to the content sequence.</li>
+              </ol>
+
+            </td>
           </tr>
           <tr>
-            <td>1.4.1</td>
+            <td>1.4.1: Use of color</td>
             <td>A</td>
-            <td>Use of color</td>
-            <td></td>
-            <td></td>
+            <td>Color can not be used as the only visual characteristic to show information or actions because users with low vision could struggle to perceive the color differences</td>
+            <td>
+              <ol>
+                <li>Buttons</li>
+                <li>Header and footer</li>
+                <li>Sortable tables</li>
+              </ol>
+
+            </td>
+            <td>
+              <ol>
+                <li>Buttons are equiped with both text and value which makes them accessible. Buttons change color while :hover which could be a problem.
+                  However a user that navigate using AT will not be in need for :hover information as long as the buttons' purpose is made clear usnig labels</li>
+                <li>Header contains of navigation bar where each button is not seperated. We should check if these have labels that ensure an AT to read them</li>
+                <li>Tables are sortable when th are clicked on, but this function isn´t vizualized</li>
+              </ol>
+
+            </td>
           </tr>
           <tr>
-            <td>1.4.2</td>
+            <td>1.4.2: Audio control</td>
             <td>A</td>
-            <td>Audio control</td>
-            <td></td>
-            <td></td>
+            <td>Audio content that is played for mor ethan 3 seconds should allow the user to pause/ stop or control the volume of the audio</td>
+            <td>We dont have audio content on our website</td>
+            <td>Not relevant</td>
           </tr>
           <tr>
-            <td>1.4.3</td>
+            <td>1.4.3: Contrast</td>
             <td>AA</td>
-            <td>Contrast</td>
-            <td></td>
-            <td></td>
+            <td> The text should have a 4.5:1 contrast to its background when the background is a solid color. This contrast applies for text that is less than 18 pt = not bold, 14 pt = bold.
+              Calculating px to pt: 1pt = 1,333px. For example 14pt=18,5px and 18pt=24px
+              Large text should have a scale of 3:1. The rules mentioned shall not apply for decorative text </td>
+            <td>
+              <ol>
+              <li>text on buttons</li>
+              <li>text in header/ footer</li>
+              <li>table descriptions</li>
+            </ol>
+          </td>
+            <td>
+              <ol>
+                <li>When not :hover the text on buttons is 1rem and we should check its contrast ratio</li>
+                <li>Text in header and footer is less than 24px and should be checked</li>
+                <li>id=secTableDescrip font size is less than 24px so contrast ratio should be checked</li>
+              </ol>
+            </td>
           </tr>
           <tr>
-            <td>1.4.4</td>
+            <td>1.4.4: Resize text</td>
             <td>AA</td>
-            <td>Resize text</td>
-            <td></td>
-            <td></td>
+            <td>This allows users with low vision to increase the text size.
+              Resize of text can be resized up to 200%.</td>
+            <td>Check if all text in our website is resizeable without losing porportions and changing their positions</td>
+            <td>Use devTools to set zoom to 200% and check if the website support this. If not, we should set </td>
           </tr>
           <tr>
-            <td>1.4.5</td>
+            <td>1.4.5: Images of Text</td>
             <td>AA</td>
-            <td>Images of Text</td>
-            <td></td>
-            <td></td>
+            <td>Images of text should be used with caution because screenreaders cannot read the images' content</td>
+            <td>We don't have any images of text</td>
+            <td>Not relevant</td>
           </tr>
           <tr>
-            <td>1.4.6</td>
+            <td>1.4.6: Contrast (enhanced)</td>
             <td>AAA</td>
-            <td>Contrast (enhanced)</td>
-            <td></td>
-            <td></td>
+            <td>Same as 1.4.3 but this iis on a higher level and give better accessibility</td>
+            <td>Check the same text as in 1.4.3</td>
+            <td>Use contrast- ratio tool to determine whether the value is lower than 7:1</td>
           </tr>
           <tr>
-            <td>1.4.7</td>
+            <td>1.4.7: Low or no background audio</td>
             <td>AAA</td>
-            <td>Low or no background audio</td>
-            <td></td>
-            <td></td>
+            <td>Including the audio controls form level AA principle 1.4.2, the audio volume should be off or very low when opening the website</td>
+            <td>We dont have audio on our website</td>
+            <td>Not relevant</td>
           </tr>
           <tr>
-            <td>1.4.8</td>
+            <td>1.4.8: Visual Presentation</td>
             <td>AAA</td>
-            <td>Visual Presentation</td>
-            <td></td>
-            <td></td>
+            <td>Colors and font sizes should be chosen by user agent and not in the stylesheet</td>
+            <td>This affect all of our content. However if we remove all colors, will users that haven´t set up styles for their user agent, see the website with no colors</td>
+            <td>Unless we find a way to do both: Allow predefined colors in stylesheet, and make them changeable by user agents, we should not improve this</td>
           </tr>
           <tr>
-            <td>1.4.9</td>
+            <td>1.4.9: Images of text</td>
             <td>AAA</td>
-            <td>Images of text</td>
-            <td></td>
-            <td></td>
+            <td>Images of text should only be used as decorations with no functionality</td>
+            <td>We don't have images of text</td>
+            <td>Not relevant</td>
           </tr>
         </div>
         <div class="OperablePrinciples">

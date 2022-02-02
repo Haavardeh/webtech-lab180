@@ -35,28 +35,131 @@ Appendix A & B (as tables) with more detailed information as described above-->
         <th>WCAG 2.0 Principles</th>
         <th>Level</th>
         <th>Description</th>
-        <th>Where it affect our code</th>
-        <th>How to solve it</th>
+        <th>Where it can affect our code</th>
+        <th>Should we solve it? if so, how?</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1.1.1</td>
-        <td>A</td>
-        <td>All non-text content has an available text alternative</td>
-      </tr>
-      <tr>
-        <td>1.3.1</td>
-        <td>A</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1.3.2</td>
-        <td>AAA</td>
-      </tr>
+      <div class="PercievablePrinciples">
+        <tr>
+          <td><b>Percievable</b></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1.1.1: All non-text content has an available text alternative</td>
+          <td>A</td>
+          <td>To support assistant technology all non-text content should be described with labels, names, or alternative text</td>
+          <td>
+            <ol>
+              <li> All inputs have "name" attribute </li>
+              <li> Assign "alt" attribute to figures and images </li>
+              <li>Background image</li>
+              <li>Other images</li>
+              <li>Buttons</li>
+            </ol>
+
+          </td>
+          <td>
+            <ol>
+              <li>All inputs already have a "name" attribute already solved</li>
+              <li>First image in the figure is misisng an "alt" attribute</li>
+              <li>Background image is for decorative matters, so no need for "alt" attribute</li>
+              <li>Other images already have "alt" attributes</li>
+              <li>submitBtn have value attribute, and button has text</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>1.3.1: Info and Relationships</td>
+          <td>A</td>
+          <td>Ordering the content in a meaningful sequence will help users with screen readers to orientate and navigate on the webpage.
+          This can be accomplished by assigning landmark roles and structuring html content in a logical way.</td>
+          <td>
+            <ol>
+              <li>Assign landmark role to all div-elements</li>
+            </ol>
+
+          </td>
+          <td>
+            <ol>
+              <li>In developerTool while hovering the pointer over elements,
+                shows that div elements already have sufficient roles although they are not specified in the html file</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>1.3.2 Ordering the content in a Meaningful Sequence</td>
+          <td>A</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1.3.3</td>
+          <td>A</td>
+          <td>Sensory Characteristics</td>
+        </tr>
+        <tr>
+          <td>1.4.1</td>
+          <td>A</td>
+          <td>Use of color</td>
+        </tr>
+        <tr>
+          <td>1.4.2</td>
+          <td>A</td>
+          <td>Audio control</td>
+        </tr>
+        <tr>
+          <td>1.4.3</td>
+          <td>A</td>
+          <td>Contrast</td>
+        </tr>
+        <tr>
+          <td>1.4.4</td>
+          <td>A</td>
+          <td>Resize text</td>
+        </tr>
+        <tr>
+          <td>1.4.5</td>
+          <td>A</td>
+          <td>Images of Text</td>
+        </tr>
+        <tr>
+          <td>1.4.6</td>
+          <td>A</td>
+          <td>Contrast (enhanced)</td>
+        </tr>
+        <tr>
+          <td>1.4.7</td>
+          <td>A</td>
+          <td>Low or no background audio</td>
+        </tr>
+        <tr>
+          <td>1.4.8</td>
+          <td>A</td>
+          <td>Visual Presentation</td>
+        </tr>
+        <tr>
+          <td>1.4.9</td>
+          <td>A</td>
+          <td>Images of text</td>
+        </tr>
+      </div>
+      <div class="OperablePrinciples">
+        <tr>
+          <td><b>Operable</b></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </div>
     <tbody>
   </table>
 </div>
+
+<br><br>
 
 <div class="table">
   <caption>Appendix B</caption>

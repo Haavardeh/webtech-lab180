@@ -7,300 +7,381 @@
 </head>
 
 <body>
-<section class="front">
-<h1> Assignment 4, group 180. Date: 01.02.22 </h1>
-<h2> Authors: Håvard Ellila Homme and Tiffany Thao My Nguyen </h2>
-</section>
+  <div class="nav">
+    <nav>
+      <ul>
+        <li><a href="#front">Intro</a></li>
+        <li><a href="#main">Accessibility highlights</a></li>
+        <li><a href="#appendixA">Appendix A</a></li>
+        <li><a href="#appendixB">Appendix B</a></li>
+      </ul>
+    </nav>
+  </div>
 
-<section class="intro">
-<h3> Introduction </h3>
-</section>
+  <section id="front">
+  <h1> Assignment 4, group 180. Date: 01.02.22 </h1>
+  <h2> Authors: Håvard Ellila Homme and Tiffany Thao My Nguyen </h2>
+  </section>
 
-<section class="main">
-<h3> Accessibility highlights </h3>
-<p> The colors of our webpage consists of grey, white, and black tones. These might be conflicting with WCAG 1.4.1 (Use of colors) and 1.4.3 (Contrast). We did use a contrast ratio.
-    The background image had two different colors, but the most dominant one was a lighter gray (#E8E8E9). We got a score of 17.15 on the contrast ratio when we compared the background color with black.
-    It is said that 17.15 “Passes AAA level for any size text and AA for user interface components and graphical objects” <a href="https://contrast-ratio.com/#black-on-%23E8E8E9" target="_blank"> (source)</a>.
-    Furthermore, the link in the footer is colored blue, while the background of the footer is colored as a darker blue which might cause concerns due to the 1.4.3 contrast principle. Since most of the text is smaller than 18px no-bold, there has to be a contrast ratio of 4:5:1. If the contrast is lower than the recommendations from WCAG 2.0, users with lower color perception might struggle to read the content. We used the contrast ratio, and as we thought it got a low score of 3.27, which is not quite appropriate. <br><br>
+  <section id="intro">
+  <h3> Introduction </h3>
+  </section>
 
-    There were several principles focusing on audio content, and images of text which both are irrelevant for our webpage since it does not contain such type of content. <br><br>
+  <section id="main">
+  <h3> Accessibility highlights </h3>
+  <p> The colors of our webpage consists of grey, white, and black tones. These might be conflicting with WCAG 1.4.1 (Use of colors) and 1.4.3 (Contrast). We did use a contrast ratio.
+      The background image had two different colors, but the most dominant one was a lighter gray (#E8E8E9). We got a score of 17.15 on the contrast ratio when we compared the background color with black.
+      It is said that 17.15 “Passes AAA level for any size text and AA for user interface components and graphical objects” <a href="https://contrast-ratio.com/#black-on-%23E8E8E9" target="_blank"> (source)</a>.
+      Furthermore, the link in the footer is colored blue, while the background of the footer is colored as a darker blue which might cause concerns due to the 1.4.3 contrast principle. Since most of the text is smaller than 18px no-bold, there has to be a contrast ratio of 4:5:1. If the contrast is lower than the recommendations from WCAG 2.0, users with lower color perception might struggle to read the content. We used the contrast ratio, and as we thought it got a low score of 3.27, which is not quite appropriate. <br><br>
 
-    Another concern we had was with WCAG 1.4.4. Resize text, as we were not sure if the text on the website would be properly adjusted if we resized the website up to 200 percent.
-    We did try it out and when we zoomed in, it did not lose any content or functionality.
-    The design shifted to the design we had for smaller screens, and it was possible to perceive all the information that we had on the website without any problems.
-</p>
+      There were several principles focusing on audio content, and images of text which both are irrelevant for our webpage since it does not contain such type of content. <br><br>
 
-<h3> Improvement plan </h3>
-<p> There were quite a few things that we could improve, but we did have to prioritize which improvement actions we wanted to work on. </p>
-<ul class="list">
-  <li>Improve the print style (and exclude unnecessary items)</li>
-  <li>Fix the nav links so it serves some functionality.</li>
-  <li>Fix contrast on mail link and the footer. High priority, because it is important that users are able to perceive the information on the website. WCAG 1.4.3</li>
-  <li>Add alt to all images on the website. WCAG …</li>
-  <li>Run the validators for both HTML and CSS without any errors</li>
-</ul>
-</section>
+      Another concern we had was with WCAG 1.4.4. Resize text, as we were not sure if the text on the website would be properly adjusted if we resized the website up to 200 percent.
+      We did try it out and when we zoomed in, it did not lose any content or functionality.
+      The design shifted to the design we had for smaller screens, and it was possible to perceive all the information that we had on the website without any problems.
+  </p>
 
-<div class="table">
-  <h3>Appendix A</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>WCAG 2.0 Principles</th>
-        <th>Level</th>
-        <th>Description</th>
-        <th>Where it can affect our code</th>
-        <th>Should we solve it? if so, how?</th>
-      </tr>
-    </thead>
-    <tbody>
-      <div class="PercievablePrinciples">
-        <tr>
-          <td colspan="5"><b>Percievable</b></td>
-        </tr>
-        <tr>
-          <td>1.1.1: All non-text content has an available text alternative</td>
-          <td>A</td>
-          <td>To support assistant technology all non-text content should be described with labels, names, or alternative text</td>
-          <td>
-            <ol>
-              <li> All inputs have "name" attribute </li>
-              <li> Assign "alt" attribute to figures and images </li>
-              <li>Background image</li>
-              <li>Other images</li>
-              <li>Buttons</li>
-            </ol>
+  <h3> Improvement plan </h3>
+  <p> There were quite a few things that we could improve, but we did have to prioritize which improvement actions we wanted to work on. </p>
+  <ul class="list">
+    <li>Improve the print style (and exclude unnecessary items)</li>
+    <li>Fix the nav links so it serves some functionality.</li>
+    <li>Fix contrast on mail link and the footer. High priority, because it is important that users are able to perceive the information on the website. WCAG 1.4.3</li>
+    <li>Add alt to all images on the website. WCAG …</li>
+    <li>Run the validators for both HTML and CSS without any errors</li>
+  </ul>
+  </section>
 
-          </td>
-          <td>
-            <ol>
-              <li>All inputs already have a "name" attribute already solved</li>
-              <li>First image in the figure is misisng an "alt" attribute</li>
-              <li>Background image is for decorative matters, so no need for "alt" attribute</li>
-              <li>Other images already have "alt" attributes</li>
-              <li>submitBtn have value attribute, and button has text</li>
-            </ol>
-          </td>
-        </tr>
+  <div id="appendixA">
+    <h3>Appendix A</h3>
+    <table>
+      <thead>
         <tr>
-          <td>1.3.1: Info and Relationships</td>
-          <td>A</td>
-          <td>Ordering the content in a meaningful sequence will help users with screen readers to orientate and navigate on the webpage.
-          This can be accomplished by assigning landmark roles and structuring html content in a logical way.</td>
-          <td>
-            <ol>
-              <li>Assign landmark role to all div-elements</li>
-            </ol>
-          </td>
-          <td>
-            <ol>
-              <li>In developerTool while hovering the pointer over elements,
-                shows that div elements already have sufficient roles although they are not specified in the html file</li>
-            </ol>
-          </td>
+          <th>WCAG 2.0 Principles</th>
+          <th>Level</th>
+          <th>Description</th>
+          <th>Where it can affect our code</th>
+          <th>Should we solve it? if so, how?</th>
         </tr>
-        <tr>
-          <td>1.3.2 Ordering the content in a Meaningful Sequence</td>
-          <td>A</td>
-          <td>Multicolumn webpages must be read vertical column by column where each element has a logical location</td>
-          <td>
-            <ol>
-              <li>Content layout</li>
-              <li>Content inside containers should have meaningful sequence.</li>
-            </ol>
+      </thead>
+      <tbody>
+        <div class="PercievablePrinciples">
+          <tr>
+            <td colspan="5"><b>Percievable</b></td>
+          </tr>
+          <tr>
+            <td>1.1.1: All non-text content has an available text alternative</td>
+            <td>A</td>
+            <td>To support assistant technology all non-text content should be described with labels, names, or alternative text</td>
+            <td>
+              <ol>
+                <li> All inputs have "name" attribute </li>
+                <li> Assign "alt" attribute to figures and images </li>
+                <li>Background image</li>
+                <li>Other images</li>
+                <li>Buttons</li>
+              </ol>
 
-          </td>
-          <td>
-            <ol>
-              <li>Our layout contains of one vertical row which gives lower concerns due to the content´s sequence. Nothing to change here.</li>
-              <li>The last image on the webpage is located between heading and description in the dl element. It might be better to place the images
-              after the description. But this is a subjective opinion, and therefore less important to change. </li>
-            </ol>
+            </td>
+            <td>
+              <ol>
+                <li>All inputs already have a "name" attribute already solved</li>
+                <li>First image in the figure is misisng an "alt" attribute</li>
+                <li>Background image is for decorative matters, so no need for "alt" attribute</li>
+                <li>Other images already have "alt" attributes</li>
+                <li>submitBtn have value attribute, and button has text</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>1.3.1: Info and Relationships</td>
+            <td>A</td>
+            <td>Ordering the content in a meaningful sequence will help users with screen readers to orientate and navigate on the webpage.
+            This can be accomplished by assigning landmark roles and structuring html content in a logical way.</td>
+            <td>
+              <ol>
+                <li>Assign landmark role to all div-elements</li>
+              </ol>
+            </td>
+            <td>
+              <ol>
+                <li>In developerTool while hovering the pointer over elements,
+                  shows that div elements already have sufficient roles although they are not specified in the html file</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>1.3.2 Ordering the content in a Meaningful Sequence</td>
+            <td>A</td>
+            <td>Multicolumn webpages must be read vertical column by column where each element has a logical location</td>
+            <td>
+              <ol>
+                <li>Content layout</li>
+                <li>Content inside containers should have meaningful sequence.</li>
+              </ol>
 
-          </td>
-        </tr>
-        <tr>
-          <td>1.3.3 Sensory Characteristics</td>
-          <td>A</td>
-          <td>Interactive and non- decorative content shouldn't depend on shape and color</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.1</td>
-          <td>A</td>
-          <td>Use of color</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.2</td>
-          <td>A</td>
-          <td>Audio control</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.3</td>
-          <td>A</td>
-          <td>Contrast</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.4</td>
-          <td>A</td>
-          <td>Resize text</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.5</td>
-          <td>A</td>
-          <td>Images of Text</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.6</td>
-          <td>A</td>
-          <td>Contrast (enhanced)</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.7</td>
-          <td>A</td>
-          <td>Low or no background audio</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.8</td>
-          <td>A</td>
-          <td>Visual Presentation</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1.4.9</td>
-          <td>A</td>
-          <td>Images of text</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </div>
-      <div class="OperablePrinciples">
-        <tr>
-          <td colspan="5"><b>Operable</b></td>
-        </tr>
-        <tr>
-          <td>2.1.1</td>
-          <td>A</td>
-          <td>Keyboard</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>2.1.2</td>
-          <td>A</td>
-          <td>No Keyboard Trap</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>2.1.3</td>
-          <td>AAA</td>
-          <td>Keyboard (no exception)</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </div>
-    <tbody>
-  </table>
-</div>
+            </td>
+            <td>
+              <ol>
+                <li>Our layout contains of one vertical row which gives lower concerns due to the content´s sequence. Nothing to change here.</li>
+                <li>The last image on the webpage is located between heading and description in the dl element. It might be better to place the images
+                after the description. But this is a subjective opinion, and therefore less important to change. </li>
+              </ol>
 
-<br><br>
+            </td>
+          </tr>
+          <tr>
+            <td>1.3.3 Sensory Characteristics</td>
+            <td>A</td>
+            <td>Interactive and non- decorative content shouldn't depend on shape and color</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.1</td>
+            <td>A</td>
+            <td>Use of color</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.2</td>
+            <td>A</td>
+            <td>Audio control</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.3</td>
+            <td>A</td>
+            <td>Contrast</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.4</td>
+            <td>A</td>
+            <td>Resize text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.5</td>
+            <td>A</td>
+            <td>Images of Text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.6</td>
+            <td>A</td>
+            <td>Contrast (enhanced)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.7</td>
+            <td>A</td>
+            <td>Low or no background audio</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.8</td>
+            <td>A</td>
+            <td>Visual Presentation</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1.4.9</td>
+            <td>A</td>
+            <td>Images of text</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </div>
+        <div class="OperablePrinciples">
+          <tr>
+            <td colspan="5"><b>Operable</b></td>
+          </tr>
+          <tr>
+            <td>2.1.1</td>
+            <td>A</td>
+            <td>Keyboard</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.1.2</td>
+            <td>A</td>
+            <td>No Keyboard Trap</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.1.3</td>
+            <td>AAA</td>
+            <td>Keyboard (no exception)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.1</td>
+            <td>A</td>
+            <td>Bypass blocks</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.2</td>
+            <td>A</td>
+            <td>Page Titled</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.3</td>
+            <td>A</td>
+            <td>Focus order</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.4</td>
+            <td>A</td>
+            <td>Link Purpose (In Context)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.5</td>
+            <td>AA</td>
+            <td>Multiple ways</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.6</td>
+            <td>AA</td>
+            <td>Headings and Labels</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.7</td>
+            <td>AA</td>
+            <td>Focus visible</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.8</td>
+            <td>AAA</td>
+            <td>Location</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.9</td>
+            <td>AAA</td>
+            <td>Link Purpose (Link only)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.4.10</td>
+            <td>AAA</td>
+            <td>Section Headings</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </div>
+      <tbody>
+    </table>
+  </div>
 
-<div class="table">
-  <h3>Appendix B</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Assignment</th>
-        <th>Criteria</th>
-        <th>Comment</th>
-        <th>Feedback related to</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th rowspan="8">Assignment 1</th>
-        <td>Appendix 1</td>
-        <td>none of your nav links works properly.</td>
-        <td>Negative impact on usability. The nav links do not work properly, so it might confuse the users since it serves no purpose.</td>
-      </tr>
-      <tr>
-        <td>Interactive form</td>
-        <td>The types are completely wrong, type for brand, os and the model should have been text instead of a string. The type for screen size should have been a number instead of an integer.</td>
-        <td>Negative impact on usability. The data cannot be read properly, since the types are invalid. (we did fix it for assignment 2)</td>
-      </tr>
-      <tr>
-        <td>Validator check</td>
-        <td>A couple of errors were reported by the validator.</td>
-        <td>Negative impact on usability, also related to the interactive form. </td>
-      </tr>
-      <tr>
-        <td>Print style</td>
-        <td>It is a decent design. You could have deleted the submit button, the input fields, and the nav links. Some of the images look off from the table.</td>
-        <td>Negative impact on accessibility. The things we included take up unnecessary space, and have no function on the print.</td>
-      </tr>
-      <tr>
-        <td>Screen style</td>
-        <td>The style for smaller screens is different compared to the larger screens.</td>
-        <td>Usability. It has a positive impact, trying to improve both usability and functionality by implementing different designs for smaller screens.</td>
-      </tr>
-      <tr>
-        <td>Responsive design</td>
-        <td>You thought of it good to change your table design when changing to smaller screens. There were a couple of margins and padding problems.</td>
-        <td>This has a negative impact related to usability. The webpage was not working properly, which hindered some of the usability.</td>
-      </tr>
-      <tr>
-        <td>Misc</td>
-        <td>Solid CSS design. You might group your selectors for general attributes. I have noticed some font-family and couple more attributes used in a redundant way for some selectors.</td>
-        <td>Technical implementation detail.It would’ve been more convenient to group them together, as it would have taken up less space on the code. It does not have a big impact related to accessibility or usability. </td>
-      </tr>
-      <tr>
-        <td>Validator check</td>
-        <td>An error was reported by the validator. padding: black is not a valid attribute.</td>
-        <td>Technical implementation detail. We did run the validator check, but we forgot to fix the error. It did not affect the usability or accessibility, but served no purpose.</td>
-      </tr>
-      <tr>
-        <th rowspan="4">Assigment 2</th>
-        <td>Sortable tables</td>
-        <td>Sorting works. Later on, you could support your table to sort numerically for the screen size.</td>
-        <td>It is related to usability. It appears that the sorting does work numerically as well. </td>
-      </tr>
-      <tr>
-        <td>Dynamic table</td>
-        <td>no use of jquery in line 107</td>
-        <td>Technical implementation detail. The code does work as it should, but it is bad code usage.</td>
-      </tr>
-      <tr>
-        <td>Form submit as SPA</td>
-        <td>Form data should have turned to JSON before posting it.</td>
-        <td>Technical implementation detail. No impact on the usability or accessibility. </td>
-      </tr>
-      <tr>
-        <td>Misc</td>
-        <td>Your code from lines 110 to 119 is redundant; you just needed to call your updateTable(); -2 <br> not deleted the action and the method part of the form in HTML. You don't need these anymore. - no points were deducted for this just a tip. <br> Instead of calling document.ready() multiple times, you could have had one document.ready(), declare your functions outside of it, and call them inside document.ready(). -1</td>
-        <td>Technical implementation detail. No impact on the usability or accessibility. </td>
-      </tr>
-    <tbody>
-  </table>
-</div>
+  <br><br>
 
-<footer>
-</footer>
+  <div id="appendixB">
+    <h3>Appendix B</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Assignment</th>
+          <th>Criteria</th>
+          <th>Comment</th>
+          <th>Feedback related to</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="8">Assignment 1</th>
+          <td>Appendix 1</td>
+          <td>none of your nav links works properly.</td>
+          <td>Negative impact on usability. The nav links do not work properly, so it might confuse the users since it serves no purpose.</td>
+        </tr>
+        <tr>
+          <td>Interactive form</td>
+          <td>The types are completely wrong, type for brand, os and the model should have been text instead of a string. The type for screen size should have been a number instead of an integer.</td>
+          <td>Negative impact on usability. The data cannot be read properly, since the types are invalid. (we did fix it for assignment 2)</td>
+        </tr>
+        <tr>
+          <td>Validator check</td>
+          <td>A couple of errors were reported by the validator.</td>
+          <td>Negative impact on usability, also related to the interactive form. </td>
+        </tr>
+        <tr>
+          <td>Print style</td>
+          <td>It is a decent design. You could have deleted the submit button, the input fields, and the nav links. Some of the images look off from the table.</td>
+          <td>Negative impact on accessibility. The things we included take up unnecessary space, and have no function on the print.</td>
+        </tr>
+        <tr>
+          <td>Screen style</td>
+          <td>The style for smaller screens is different compared to the larger screens.</td>
+          <td>Usability. It has a positive impact, trying to improve both usability and functionality by implementing different designs for smaller screens.</td>
+        </tr>
+        <tr>
+          <td>Responsive design</td>
+          <td>You thought of it good to change your table design when changing to smaller screens. There were a couple of margins and padding problems.</td>
+          <td>This has a negative impact related to usability. The webpage was not working properly, which hindered some of the usability.</td>
+        </tr>
+        <tr>
+          <td>Misc</td>
+          <td>Solid CSS design. You might group your selectors for general attributes. I have noticed some font-family and couple more attributes used in a redundant way for some selectors.</td>
+          <td>Technical implementation detail.It would’ve been more convenient to group them together, as it would have taken up less space on the code. It does not have a big impact related to accessibility or usability. </td>
+        </tr>
+        <tr>
+          <td>Validator check</td>
+          <td>An error was reported by the validator. padding: black is not a valid attribute.</td>
+          <td>Technical implementation detail. We did run the validator check, but we forgot to fix the error. It did not affect the usability or accessibility, but served no purpose.</td>
+        </tr>
+        <tr>
+          <th rowspan="4">Assigment 2</th>
+          <td>Sortable tables</td>
+          <td>Sorting works. Later on, you could support your table to sort numerically for the screen size.</td>
+          <td>It is related to usability. It appears that the sorting does work numerically as well. </td>
+        </tr>
+        <tr>
+          <td>Dynamic table</td>
+          <td>no use of jquery in line 107</td>
+          <td>Technical implementation detail. The code does work as it should, but it is bad code usage.</td>
+        </tr>
+        <tr>
+          <td>Form submit as SPA</td>
+          <td>Form data should have turned to JSON before posting it.</td>
+          <td>Technical implementation detail. No impact on the usability or accessibility. </td>
+        </tr>
+        <tr>
+          <td>Misc</td>
+          <td>Your code from lines 110 to 119 is redundant; you just needed to call your updateTable(); -2 <br> not deleted the action and the method part of the form in HTML. You don't need these anymore. - no points were deducted for this just a tip. <br> Instead of calling document.ready() multiple times, you could have had one document.ready(), declare your functions outside of it, and call them inside document.ready(). -1</td>
+          <td>Technical implementation detail. No impact on the usability or accessibility. </td>
+        </tr>
+      <tbody>
+    </table>
+  </div>
+
+  <footer>
+  </footer>
 </body>
 </html>

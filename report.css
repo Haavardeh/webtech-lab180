@@ -42,3 +42,31 @@ p, .list {
 h1, h2, h3, p, li {
   font-family: arial, sans-serif;
 }
+
+/* Navigation bar from assign1*/
+.nav {
+  background-color: #006699;
+  height: 6%;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.nav li {
+  display: inline-block;
+}
+.nav li a {
+  display: block;
+  color: white;
+  padding: 12px 30px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+.nav li a:hover {
+  background-color: #3B99D2;
+}
